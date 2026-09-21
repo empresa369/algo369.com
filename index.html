@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algo369 — guias honestos para o dia a dia</title>
+<meta name="description" content="Publicação independente sobre casa, bem-estar e escolhas do dia a dia. Guias práticos e recomendações que só fazemos quando as podemos justificar.">
+<meta property="og:title" content="Algo369">
+<meta property="og:description" content="Guias honestos para o dia a dia. Só recomendamos o que podemos justificar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://algo369.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#06101e; --bg2:#101a30; --bg3:#16203a; --border:#25304f;
+  --tx:#e8eefc; --mut:#93a0bd; --p:#7c4dff; --p2:#2dd4ff; --g:#34d399;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--tx);
+  font-family:"Inter",system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--p2)}
+.env{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+/* topo */
+header.topo{
+  position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+}
+.topo .env{display:flex;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
+.marca{
+  font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:600;
+  letter-spacing:-.01em;text-decoration:none;color:var(--tx);margin-right:auto;
+}
+.marca b{color:var(--p2);font-weight:600}
+.topo nav{display:flex;gap:22px}
+.topo nav a{
+  font-size:14px;color:var(--mut);text-decoration:none;transition:color .16s;
+}
+.topo nav a:hover{color:var(--tx)}
+.topo nav a:focus-visible,.marca:focus-visible{outline:2px solid var(--p2);outline-offset:4px;border-radius:3px}
+
+/* hero */
+.hero{padding:clamp(60px,11vw,120px) 0 clamp(48px,8vw,80px);border-bottom:1px solid var(--border)}
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(38px,6.2vw,68px);line-height:1.08;margin:0 0 22px;
+  letter-spacing:-.02em;max-width:16ch;text-wrap:balance;
+}
+.hero h1 em{font-style:italic;color:var(--p2)}
+.hero p{font-size:clamp(18px,2.2vw,21px);color:var(--mut);max-width:56ch;margin:0 0 14px}
+.selo{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:26px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);
+}
+.selo i{width:6px;height:6px;border-radius:50%;background:var(--g);display:block}
+
+/* seccoes */
+section{padding:clamp(56px,8vw,88px) 0;border-bottom:1px solid var(--border)}
+h2{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(28px,4vw,40px);margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance;
+}
+.olho{
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--p);margin-bottom:12px;font-weight:500;
+}
+.intro{color:var(--mut);max-width:62ch;margin:0 0 34px}
+
+/* artigos */
+.artigos{display:grid;gap:26px}
+article.peca{
+  background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  padding:clamp(24px,3.5vw,38px);
+}
+article.peca h3{
+  font-family:"Playfair Display",Georgia,serif;font-weight:600;
+  font-size:clamp(21px,2.7vw,27px);margin:0 0 6px;line-height:1.25;text-wrap:balance;
+}
+.meta{font-size:12.5px;color:var(--mut);margin-bottom:18px;letter-spacing:.02em}
+article.peca p{margin:0 0 15px;max-width:66ch}
+article.peca p:last-child{margin-bottom:0}
+article.peca strong{color:var(--tx);font-weight:600}
+.destaque{
+  border-left:2px solid var(--p);padding-left:18px;margin:20px 0;
+  color:var(--tx);font-family:"Playfair Display",Georgia,serif;
+  font-size:19px;font-style:italic;line-height:1.6;
+}
+
+/* principios */
+.principios{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:8px}
+.principio{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:26px}
+.principio h4{
+  font-size:15px;font-weight:600;margin:0 0 8px;color:var(--tx);
+  display:flex;align-items:center;gap:9px;
+}
+.principio h4 span{
+  font-family:"Playfair Display",Georgia,serif;color:var(--p2);font-size:19px;
+}
+.principio p{margin:0;font-size:15px;color:var(--mut)}
+
+/* contacto */
+.contacto{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+.botao{
+  display:inline-block;background:var(--p);color:#fff;text-decoration:none;
+  padding:14px 28px;border-radius:8px;font-weight:500;font-size:15px;
+  transition:opacity .16s;
+}
+.botao:hover{opacity:.9}
+.botao:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.botao.claro{background:transparent;border:1px solid var(--border);color:var(--tx)}
+
+footer{padding:44px 0 60px;color:var(--mut);font-size:14px}
+footer .linhas{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:18px}
+footer a{color:var(--mut)}
+footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
+
+@media (max-width:640px){
+  .topo nav{gap:16px}
+  .topo nav a{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="env">
+    <a class="marca" href="#topo">Algo<b>369</b></a>
+    <nav>
+      <a href="#guias">Guias</a>
+      <a href="#loja">Loja</a>
+      <a href="#principios">Como trabalhamos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="env" id="topo">
+  <div class="hero">
+    <div class="selo"><i></i> Publicação independente · Suíça</div>
+    <h1>Guias honestos para <em>o dia a dia</em>.</h1>
+    <p>Escrevemos sobre casa, bem-estar e as pequenas escolhas que se fazem todos os dias.</p>
+    <p>Só recomendamos o que usámos ou o que conseguimos justificar. Quando não sabemos, dizemos que não sabemos.</p>
+  </div>
+</div>
+
+<!-- ================= GUIAS ================= -->
+<section id="guias">
+<div class="env">
+  <div class="olho">Guias</div>
+  <h2>O que temos escrito</h2>
+  <p class="intro">Textos longos, sem pressa, sobre coisas que vale a pena perceber bem uma vez.</p>
+
+  <div class="artigos">
+
+    <article class="peca">
+      <h3>A monstera não tem buracos por acaso</h3>
+      <div class="meta">Plantas · 5 min de leitura</div>
+      <p>Quase toda a gente que compra uma monstera faz a mesma pergunta ao fim de uns meses: <em>porque é que as folhas novas vêm inteiras?</em> A resposta diz muito sobre a planta — e sobre o sítio onde a puseste.</p>
+      <p>Aqueles cortes chamam-se <strong>fenestrações</strong> e não são defeito nem doença. Há duas explicações aceites, e ambas vêm do sítio de onde a planta vem: o chão húmido e sombrio das florestas tropicais do sul do México, da Guatemala e do Panamá. Ali a monstera não é planta de vaso — é uma trepadeira que se agarra aos troncos e sobe à procura de luz, podendo passar dos vinte metros.</p>
+      <p>A primeira explicação é a luz. Numa folha enorme e inteira, tudo o que está por baixo fica às escuras. Os buracos deixam passar luz para as folhas de baixo da própria planta. A segunda é o vento e a chuva: uma folha cheia de aberturas deixa passar um temporal tropical sem se rasgar.</p>
+      <div class="destaque">Uma planta jovem tem folhas inteiras. Os buracos só aparecem quando ela amadurece — e amadurece mais depressa com luz indireta e espaço para subir.</div>
+      <p>Daí a parte prática. Se a tua monstera anda a fazer folhas pequenas e fechadas, quase sempre é uma de duas coisas: <strong>pouca luz</strong>, ou <strong>nada onde trepar</strong>. Uma estaca de musgo muda mais o aspeto da planta do que qualquer fertilizante.</p>
+      <p>E as raízes aéreas que saem do caule não são problema nem sujidade — é assim que ela se agarra às árvores. Podes guiá-las para a terra do vaso.</p>
+      <p>Sobre o nome: <em>Monstera</em> vem do latim <em>monstrum</em>, pelo tamanho quase monstruoso das folhas. <em>Deliciosa</em> refere-se ao fruto, que é comestível e sabe a uma mistura de ananás com banana — mas só completamente maduro. Verde, é irritante para a boca por causa dos cristais de oxalato de cálcio. Na prática, dentro de casa, ela quase nunca dá fruto.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Como se lê uma carta de tarô sem decorar nada</h3>
+      <div class="meta">Tarô · 6 min de leitura</div>
+      <p>Quem começa a aprender tarô costuma fazer a mesma coisa: comprar o baralho e tentar decorar 78 significados. É o caminho mais lento que existe — e o mais desanimador.</p>
+      <p>Há um atalho, e está desenhado dentro das próprias cartas. Quando <strong>Pamela Colman Smith</strong> ilustrou o baralho Rider-Waite em 1909, pôs em cada carta uma cena completa: personagens, objetos, tempo, direção do olhar. A cena conta a história. O significado é a leitura da cena, não uma lista à parte.</p>
+      <p>O método é olhar sempre pela mesma ordem, antes de abrir qualquer livro:</p>
+      <p><strong>Quem está na carta</strong> — uma pessoa, duas, nenhuma? De pé, sentada, deitada?<br>
+         <strong>Para onde olha</strong> — frente, trás, baixo? Quem olha para trás está preso ao passado.<br>
+         <strong>O que tem nas mãos</strong> — e o que está no chão, esquecido.<br>
+         <strong>Como está o céu</strong> — limpo, nublado, noite, tempestade. O tempo é o estado de espírito.<br>
+         <strong>Para onde te leva o olhar</strong> — há sempre um caminho, uma porta, um horizonte.</p>
+      <div class="destaque">Metade das vezes, quando chegas ao significado escrito, já lá tinhas chegado sozinho.</div>
+      <p>Um exemplo que costuma convencer. <strong>O Diabo</strong> mostra duas figuras acorrentadas a um pedestal. Parece uma carta pesada — até se reparar num detalhe: as correntes ao pescoço estão <em>largas</em>. Passavam pela cabeça. Podiam sair e não saem.</p>
+      <p>Não é preciso decorar nada para perceber o que isso quer dizer sobre um hábito, um medo ou uma relação. A carta não julga: mostra a corrente e deixa a pergunta.</p>
+      <p>Um último conselho para quem começa: <strong>lê tudo ao direito nos primeiros meses.</strong> As cartas invertidas dobram o que tens de saber e confundem mais do que ajudam. Quando os 22 Arcanos Maiores já te forem familiares, acrescenta-as.</p>
+    </article>
+
+    <article class="peca">
+      <h3>O aloe vera morre mais de carinho do que de abandono</h3>
+      <div class="meta">Plantas · 4 min de leitura</div>
+      <p>É das plantas mais vendidas do mundo e das que mais morre em casa — quase sempre pela mesma razão, e é o contrário do que se pensa.</p>
+      <p>O aloe vera é originário da Península Arábica, de terrenos secos e pedregosos. É tão antigo em cultivo que já quase não se encontra verdadeiramente selvagem: viajou com as pessoas durante milhares de anos. Aparece em tábuas sumérias de argila de cerca de 2100 a.C. e no papiro egípcio de Ebers, de cerca de 1550 a.C., que descreve preparações medicinais.</p>
+      <p>As folhas carnudas são um depósito. Por dentro têm um gel quase todo feito de água — é assim que a planta sobrevive a meses sem chuva. Esse mesmo gel é o que se usa há séculos para acalmar queimaduras solares e pequenas irritações da pele.</p>
+      <div class="destaque">Ela vem do deserto. Quer sol, terra que escoe bem, e pouquíssima água. No inverno pode passar um mês sem rega.</div>
+      <p>O erro comum é tratá-la como as outras plantas da casa: regar uma vez por semana, terra boa e rica, vaso sem furo. Em três meses as folhas ficam moles e translúcidas — não é sede, é o oposto. As raízes apodreceram.</p>
+      <p>Uma nota prática que pouca gente sabe: por baixo da casca verde há uma camada amarela chamada <strong>látex</strong> ou aloína, de sabor muito amargo. É o gel transparente do centro que se usa na pele, não essa camada.</p>
+      <p>E sobre a lenda de que Cleópatra o usava — é isso mesmo, lenda. Não é facto documentado. Mas mostra há quanto tempo esta planta tem fama.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Os watts não dizem nada sobre a força de um aspirador</h3>
+      <div class="meta">Casa · 5 min de leitura</div>
+      <p>É o número que aparece na caixa em letras grandes e é o que quase toda a gente compara. Também é o número que menos interessa.</p>
+      <p><strong>Watts é consumo, não sucção.</strong> Mede a electricidade que o aparelho gasta, não o trabalho que faz com ela. Um motor de 1200 W mal desenhado pode aspirar pior do que um de 500 W bem desenhado — a diferença sai em calor e barulho.</p>
+      <p>Isto deixou de ser teoria em 2017. O regulamento europeu 666/2013 passou a limitar os aspiradores domésticos a <strong>900 W</strong>. Muita gente achou que os aspiradores iam ficar fracos; não ficaram. Os fabricantes foram obrigados a melhorar o desenho em vez de aumentar o motor.</p>
+      <div class="destaque">Se o único número que um fabricante te dá são os watts, isso já te diz alguma coisa sobre o aparelho.</div>
+      <p>Os números que valem a pena procurar são outros:</p>
+      <p><strong>Air watts (AW)</strong> — mede a potência de sucção à saída, já com a perda do tubo e do bocal. É o mais próximo do que sentes ao aspirar. Nos sem-fios bons anda entre os 100 e os 250 AW.<br>
+         <strong>Pascal (Pa) ou kPa</strong> — mede a depressão que o motor consegue criar. Útil para comparar, mas sozinho não chega: muita depressão com pouco caudal de ar levanta pó fino e deixa o resto.<br>
+         <strong>Caudal de ar (litros por segundo)</strong> — é o que arrasta a sujidade maior.</p>
+      <p>A sucção só serve se o ar tiver por onde passar. Um saco meio cheio, um filtro sujo ou um tubo entupido derrubam a performance de qualquer aparelho, por mais caro que seja. <strong>Limpar o filtro faz mais diferença do que trocar de aspirador</strong> — e é a manutenção que quase ninguém faz.</p>
+      <p>Uma nota sobre a comparação entre com fio e sem fio: os sem-fios modernos ganham em conveniência e perdem em autonomia no modo forte. Se a casa é grande, o número a olhar não é a sucção máxima — é <em>quantos minutos</em> ele aguenta nesse modo. Costuma ser bastante menos do que o anunciado, porque o anunciado é no modo mais fraco.</p>
+    </article>
+
+    <article class="peca">
+      <h3>O que um filtro HEPA faz mesmo — e o que não faz</h3>
+      <div class="meta">Casa · 5 min de leitura</div>
+      <p>&ldquo;HEPA&rdquo; virou selo de qualidade e aparece em coisas que não têm nada a ver umas com as outras. Vale a pena saber o que a palavra significa, porque o significado é preciso.</p>
+      <p>Um filtro HEPA verdadeiro retém <strong>99,97% das partículas de 0,3 micrómetros</strong>. Este número não é escolhido ao acaso e tem uma explicação que surpreende quase toda a gente.</p>
+      <div class="destaque">0,3 µm é o tamanho <em>mais difícil</em> de apanhar. Partículas maiores e mais pequenas são filtradas com ainda mais eficiência.</div>
+      <p>Parece contraditório, mas não é. As partículas grandes chocam com as fibras e ficam presas. As muito pequenas movem-se de forma errática (movimento browniano) e acabam por colidir também. As de 0,3 µm são as que passam melhor por entre as duas coisas — por isso é nesse tamanho que se mede o pior caso. Um filtro que apanha 99,97% do pior caso apanha mais do que isso em tudo o resto.</p>
+      <p>Duas armadilhas ao comprar:</p>
+      <p><strong>&ldquo;Tipo HEPA&rdquo; ou &ldquo;estilo HEPA&rdquo; não é HEPA.</strong> São expressões sem definição legal e podem estar num filtro que retém 85%. A palavra que interessa vem acompanhada de norma — na Europa, EN 1822, com classes de H13 para cima.</p>
+      <p><strong>O filtro não é o aparelho.</strong> Um bom filtro num purificador que mal move ar limpa pouco. O número que conta é o <strong>CADR</strong> (Clean Air Delivery Rate), em metros cúbicos por hora: diz quanto ar limpo o aparelho entrega de facto. Uma sala de 20 m² com pé-direito normal precisa de bastante mais CADR do que a caixa costuma sugerir.</p>
+      <p>E o que um HEPA <em>não</em> faz: não remove gases nem cheiros. Fumo, compostos orgânicos voláteis, tinta fresca — nada disso é partícula. Para isso é preciso carvão activado, que é outro filtro e gasta-se mais depressa.</p>
+      <p>Se sofres de alergias, a diferença sente-se sobretudo no quarto e à noite. Um aparelho bom num sítio certo vale mais do que um aparelho enorme na sala.</p>
+    </article>
+
+    <article class="peca">
+      <h3>A lavanda não quer que gostes dela</h3>
+      <div class="meta">Plantas · 4 min de leitura</div>
+      <p>Há plantas que morrem por falta de atenção. A lavanda morre do contrário — e é a razão pela qual tanta gente desiste depois do primeiro vaso.</p>
+      <p>Ela cresce naturalmente nas encostas secas e calcárias do Mediterrâneo ocidental: a Provença, a Catalunha, os montes de Itália. Terra pobre, muita pedra, sol a bater o dia todo. Os campos roxos das fotografias são cultivo, mas a planta é mesmo de lá.</p>
+      <p>Isso define tudo o resto. <strong>Terra rica e húmida mata-a.</strong> O que costuma acontecer é isto: compra-se a lavanda, planta-se em terra de saco boa e escura, rega-se duas vezes por semana como às outras — e ao fim de dois meses fica cinzenta pelo meio e nunca mais recupera. Não foi sede, foi apodrecimento das raízes.</p>
+      <div class="destaque">O sítio mais soalheiro que tiveres, terra que escoe depressa, e rega rara. Se estiveres na dúvida, não regues.</div>
+      <p>Sobre o perfume: vem de óleos essenciais guardados em pelos minúsculos à superfície das folhas e das flores. Para a planta não são perfume nenhum — são defesa contra insectos e contra o calor. Ao esfregar as folhas entre os dedos rebentam esses pelos, e é por isso que o cheiro fica nas mãos.</p>
+      <p>O nome também diz o uso: <em>lavanda</em> vem do latim <em>lavare</em>, lavar. Os romanos punham-na na água dos banhos e a lavar roupa. O gesto ficou no nome até hoje.</p>
+      <p>Uma coisa prática que muda o aspecto da planta ao fim de uns anos: <strong>cortar depois da floração</strong>, sem chegar à madeira velha. Sem esse corte, a lavanda fica lenhosa por baixo e desengonçada, e aí já não há volta a dar.</p>
+      <p>E se tiveres varanda: uma única planta muda a quantidade de abelhas que aparecem. O mel de lavanda tem sabor próprio por causa disso.</p>
+    </article>
+
+    <article class="peca">
+      <h3>A regra do dedo: quando regar, sem calendário</h3>
+      <div class="meta">Plantas · 3 min de leitura</div>
+      <p>A maior parte das plantas de interior que morrem não morrem de sede. Morrem de rega a mais — e quase sempre porque alguém decidiu regar &ldquo;às quartas-feiras&rdquo;.</p>
+      <p>O problema do calendário é que a planta não vive num calendário. A mesma planta bebe muito mais em Julho com janela aberta do que em Janeiro com aquecimento e dias curtos. Regar sempre igual é acertar metade do ano e falhar a outra metade.</p>
+      <div class="destaque">Enfia o dedo na terra até ao segundo nó. Se sair húmido, não regues. Se sair seco, rega bem até sair água pelo fundo.</div>
+      <p>É simples e funciona para a maioria das plantas de casa. Duas variações que vale a pena saber:</p>
+      <p><strong>Suculentas, aloe e cactos</strong> — espera que a terra esteja seca <em>toda</em>, não só à superfície. No inverno podem passar semanas sem nada.<br>
+         <strong>Fetos e plantas de folha fina</strong> — querem a terra sempre ligeiramente húmida, mas nunca encharcada.</p>
+      <p>Como se reconhece o excesso: folhas amarelas e moles, terra que cheira a mofo, mosquinhas a voar à volta do vaso. Como se reconhece a falta: folhas murchas mas ainda firmes, terra que se descola das paredes do vaso.</p>
+      <p>A confusão entre os dois é comum porque <strong>as folhas caem nos dois casos</strong>. A diferença está ao toque: murcha e mole é água a mais; murcha e seca é água a menos.</p>
+      <p>E o mais importante de tudo, que não tem nada a ver com rega: <strong>o vaso tem de ter furo.</strong> Um vaso decorativo sem drenagem transforma qualquer rega correcta em água parada nas raízes. Se gostas do vaso, usa-o como cachepot — a planta fica no vaso de plástico com furos, lá dentro.</p>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- ================= LOJA ================= -->
+<section id="loja">
+<div class="env">
+  <div class="olho">Loja</div>
+  <h2>O que vendemos hoje</h2>
+  <p class="intro">Só está aqui o que existe e se pode comprar agora. Quando houver mais, aparece — não antes.</p>
+
+  <div class="principios">
+    <div class="principio">
+      <h4><span>1</span> Guia «Mentalidade 369»</h4>
+      <p>Um guia curto sobre foco e disciplina no dia a dia, em português. Ficheiro digital, CHF 9, entregue na hora.</p>
+      <p><a class="botao" href="https://mariocosta.gumroad.com/l/crcinr" rel="noopener">Comprar no Gumroad</a></p>
+    </div>
+    <div class="principio">
+      <h4><span>2</span> Segunda opinião honesta sobre um robot de trading</h4>
+      <p>Tens um EA (MetaTrader) e queres saber se é real ou se só parece bom no backtest? Testamo-lo a sério e dizemos-te o que encontrámos — sem prometer lucros, sem vender sinais. 29 CHF.</p>
+      <p><a class="botao" href="https://www.mql5.com/en/users/algo369" rel="noopener">Pedir no MQL5</a></p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ================= PRINCÍPIOS ================= -->
+<section id="principios">
+<div class="env">
+  <div class="olho">Como trabalhamos</div>
+  <h2>As regras que seguimos</h2>
+  <p class="intro">Escrevemo-las aqui para nos podermos ser cobrados por elas.</p>
+
+  <div class="principios">
+    <div class="principio">
+      <h4><span>1</span> Não prometemos resultados</h4>
+      <p>Não dizemos que uma coisa vai mudar a tua vida. Descrevemos o que ela é, para que serve e onde falha.</p>
+    </div>
+    <div class="principio">
+      <h4><span>2</span> Quando não sabemos, dizemos</h4>
+      <p>Se não testámos, escrevemos que não testámos. Se é lenda e não facto, fica dito que é lenda.</p>
+    </div>
+    <div class="principio">
+      <h4><span>3</span> Ligações declaradas</h4>
+      <p>Se um dia ganharmos comissão por uma ligação, isso fica escrito na própria página, em português simples.</p>
+    </div>
+    <div class="principio">
+      <h4><span>4</span> Sem cupões nem pressa</h4>
+      <p>Não publicamos códigos de desconto, contagens decrescentes nem ofertas que expiram. Isso vende; não informa.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto" style="border-bottom:none">
+<div class="env">
+  <div class="olho">Contacto</div>
+  <h2>Falar connosco</h2>
+  <p class="intro">Sugestões de temas, correções ou propostas — respondemos a tudo o que for escrito por uma pessoa.</p>
+  <div class="contacto">
+    <a class="botao" href="mailto:hello@algo369.com">hello@algo369.com</a>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="env">
+  <div class="linhas">
+    <a href="#guias">Guias</a>
+    <a href="#loja">Loja</a>
+    <a href="#principios">Como trabalhamos</a>
+    <a href="mailto:hello@algo369.com">Contacto</a>
+  </div>
+  <p class="fino">
+    Algo369 — publicação independente sediada na Suíça. Escrevemos em português e inglês.
+    O conteúdo destas páginas é informativo e não substitui aconselhamento profissional,
+    médico ou financeiro. Não vendemos sinais de investimento nem prometemos retornos.
+  </p>
+  <p class="fino">&copy; 2026 Algo369</p>
+</div>
+</footer>
+
+</body>
+</html>
