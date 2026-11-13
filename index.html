@@ -9,6 +9,9 @@
 <meta property="og:description" content="Guias honestos para o dia a dia. Só recomendamos o que podemos justificar.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://algo369.com">
+<link rel="alternate" hreflang="pt" href="https://algo369.com/">
+<link rel="alternate" hreflang="de" href="https://algo369.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://algo369.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
@@ -120,10 +123,21 @@ footer{padding:44px 0 60px;color:var(--mut);font-size:14px}
 footer .linhas{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:18px}
 footer a{color:var(--mut)}
 footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
+footer .linhas + .linhas{margin-top:-8px}
+
+/* seletor de lingua PT · DE */
+.lingua{display:flex;align-items:center;gap:2px;font-size:12.5px;letter-spacing:.06em;color:var(--mut)}
+.lingua a{color:var(--mut);text-decoration:none;padding:2px 5px;border-radius:3px;transition:color .16s}
+.lingua a:hover{color:var(--tx)}
+.lingua a[aria-current]{color:var(--tx);font-weight:600}
+.lingua a:focus-visible{outline:2px solid var(--p2);outline-offset:2px}
 
 @media (max-width:640px){
   .topo nav{gap:16px}
   .topo nav a{font-size:13px}
+  .topo .env{flex-wrap:wrap;row-gap:8px}
+  .lingua{order:2}
+  .topo nav{order:3;width:100%}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -139,6 +153,11 @@ footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
       <a href="#principios">Como trabalhamos</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    <div class="lingua" role="group" aria-label="Idioma / Sprache">
+      <a href="index.html" lang="pt" hreflang="pt" aria-current="page">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="de/index.html" lang="de" hreflang="de">DE</a>
+    </div>
   </div>
 </header>
 
@@ -226,7 +245,7 @@ footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
       <p>Duas armadilhas ao comprar:</p>
       <p><strong>&ldquo;Tipo HEPA&rdquo; ou &ldquo;estilo HEPA&rdquo; não é HEPA.</strong> São expressões sem definição legal e podem estar num filtro que retém 85%. A palavra que interessa vem acompanhada de norma — na Europa, EN 1822, com classes de H13 para cima.</p>
       <p><strong>O filtro não é o aparelho.</strong> Um bom filtro num purificador que mal move ar limpa pouco. O número que conta é o <strong>CADR</strong> (Clean Air Delivery Rate), em metros cúbicos por hora: diz quanto ar limpo o aparelho entrega de facto. Uma sala de 20 m² com pé-direito normal precisa de bastante mais CADR do que a caixa costuma sugerir.</p>
-      <p>E o que um HEPA <em>não</em> faz: não remove gases nem cheiros. Fumo, compostos orgânicos voláteis, tinta fresca — nada disso é partícula. Para isso é preciso carvão activado, que é outro filtro e gasta-se mais depressa.</p>
+      <p>E o que um HEPA <em>não</em> faz: não remove gases nem cheiros. As partículas do fumo ficam no filtro, mas o cheiro do fumo, os compostos orgânicos voláteis e o cheiro a tinta fresca são gases, não partículas. Para isso é preciso carvão activado, que é outro filtro e gasta-se mais depressa.</p>
       <p>Se sofres de alergias, a diferença sente-se sobretudo no quarto e à noite. Um aparelho bom num sítio certo vale mais do que um aparelho enorme na sala.</p>
     </article>
 
@@ -362,6 +381,11 @@ footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
     <a href="#loja">Loja</a>
     <a href="#principios">Como trabalhamos</a>
     <a href="mailto:hello@algo369.com">Contacto</a>
+  </div>
+  <div class="linhas">
+    <a href="impressum.html">Impressum</a>
+    <a href="privacidade.html">Privacidade</a>
+    <a href="afiliados.html">Ligações de afiliado</a>
   </div>
   <p class="fino">
     Algo369 — publicação independente sediada na Suíça. Escrevemos em português e inglês.
