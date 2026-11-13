@@ -96,6 +96,37 @@ article.peca strong{color:var(--tx);font-weight:600}
   font-size:19px;font-style:italic;line-height:1.6;
 }
 
+section{scroll-margin-top:72px}
+/* chamada no topo */
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* loja */
+.confianca{display:flex;flex-wrap:wrap;gap:10px 24px;margin:-12px 0 36px;padding:0;list-style:none;font-size:14px;color:var(--mut)}
+.confianca li{display:flex;align-items:center;gap:9px}
+.confianca li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g)}
+.produtos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.produto{display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .18s,border-color .18s,box-shadow .18s}
+.produto:hover{transform:translateY(-3px);border-color:#3a4a75;box-shadow:0 16px 36px rgba(0,0,0,.38)}
+.produto .capa{position:relative;background:#1c1d21}
+.produto img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.etiqueta{position:absolute;top:12px;left:12px;background:rgba(6,16,30,.88);border:1px solid var(--border);color:var(--tx);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.etiqueta.ouro{color:#e8c67a;border-color:#6b5a2a}
+.produto .corpo{display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;flex:1}
+.produto h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:22px;margin:0;line-height:1.25}
+.produto p{margin:0;font-size:15px;color:var(--mut);line-height:1.6}
+.produto .formato{font-size:12.5px;letter-spacing:.04em;color:var(--mut);opacity:.85}
+.produto .rodape{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
+.preco{font-weight:600;font-size:20px;color:#e8c67a;line-height:1.2}
+.preco small{display:block;font-size:12px;font-weight:400;color:var(--mut)}
+.botao.pequeno{padding:10px 18px;font-size:14px}
+.produto.largo{grid-column:1/-1;display:grid;grid-template-columns:minmax(280px,1fr) 1.15fr}
+.produto.largo .capa{display:flex;align-items:center}
+.produto.largo .corpo{padding:28px 30px}
+.produto.largo h3{font-size:26px}
+.loja-nota{margin-top:26px;font-size:13.5px;color:var(--mut);max-width:70ch}
+@media (max-width:720px){.produto.largo{display:flex}}
+
+.em-breve{background:var(--bg3)!important;color:var(--mut)!important;cursor:default;opacity:1!important}
 /* principios */
 .principios{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:8px}
 .principio{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:26px}
@@ -167,6 +198,7 @@ footer .linhas + .linhas{margin-top:-8px}
     <h1>Guias honestos para <em>o dia a dia</em>.</h1>
     <p>Escrevemos sobre casa, bem-estar e as pequenas escolhas que se fazem todos os dias.</p>
     <p>Só recomendamos o que usámos ou o que conseguimos justificar. Quando não sabemos, dizemos que não sabemos.</p>
+    <div class="acoes"><a class="botao" href="#loja">Ver a loja</a><a class="botao claro" href="#guias">Ler os guias</a></div>
   </div>
 </div>
 
@@ -287,50 +319,88 @@ footer .linhas + .linhas{margin-top:-8px}
   <h2>O que vendemos hoje</h2>
   <p class="intro">Só está aqui o que existe e se pode comprar agora. Quando houver mais, aparece — não antes.</p>
 
-  <p class="intro">Tudo em português, em PDF para ler ou imprimir, entregue na hora pelo Gumroad. Se não te servir, escreve-nos e devolvemos o dinheiro.</p>
+  <ul class="confianca">
+    <li>PDF em português, entregue na hora</li>
+    <li>Pagamento seguro pelo Gumroad</li>
+    <li>Se não te servir, devolvemos o dinheiro</li>
+    <li>Preços em francos suíços</li>
+  </ul>
 
-  <div class="principios">
-    <div class="principio">
-      <h4><span>1</span> Guia «Mentalidade 369»</h4>
-      <p>O método em três ritmos (o dia, a semana, o ciclo), as quatro armadilhas e uma página para a parede. 6 páginas, CHF 9.</p>
-      <p><a class="botao" href="https://mariocosta.gumroad.com/l/crcinr" rel="noopener">Comprar no Gumroad</a></p>
-    </div>
-    <div class="principio">
-      <h4><span>2</span> Rastreador de Consistência</h4>
-      <p>Três métricas, 90 dias, uma cruz por dia. Celebra a linha que não quebra, não o dia heroico. 10 páginas (A4 e A5), CHF 6.</p>
-      <p><a class="botao" href="LINK_RASTREADOR" rel="noopener">Comprar no Gumroad</a></p>
-    </div>
-    <div class="principio">
-      <h4><span>3</span> Arranque 9 Dias</h4>
-      <p>Um desafio imprimível: uma área, um número, nove dias. No fim, uma pergunta só: o número mexeu? 8 páginas, CHF 7.</p>
-      <p><a class="botao" href="LINK_ARRANQUE" rel="noopener">Comprar no Gumroad</a></p>
-    </div>
-    <div class="principio">
-      <h4><span>4</span> Kit Foco 90</h4>
-      <p>O bloco de 90 minutos pronto a imprimir: cartões para a porta, checklist, ritual de fecho do dia e folha de registo. 7 páginas, CHF 9.</p>
-      <p><a class="botao" href="LINK_KITFOCO" rel="noopener">Comprar no Gumroad</a></p>
-    </div>
-    <div class="principio">
-      <h4><span>5</span> Diário 369</h4>
-      <p>Um planeador para escrever à mão, com páginas para o dia, a semana e o ciclo de nove semanas. 8 páginas, CHF 12.</p>
-      <p><a class="botao" href="LINK_DIARIO" rel="noopener">Comprar no Gumroad</a></p>
-    </div>
-    <div class="principio">
-      <h4><span>6</span> Academia 369</h4>
-      <p>O método completo em sete aulas escritas, cada uma com uma tarefa que deixa algo feito. Não são vídeos. 16 páginas, CHF 19.</p>
-      <p><a class="botao" href="LINK_ACADEMIA" rel="noopener">Comprar no Gumroad</a></p>
-    </div>
-    <div class="principio">
-      <h4><span>7</span> Pacote 3·6·9</h4>
-      <p>O Guia, o Arranque 9 Dias e o Rastreador num só ficheiro, com um guia de leitura. 26 páginas, CHF 15 (em separado, CHF 22).</p>
-      <p><a class="botao" href="LINK_PACOTE" rel="noopener">Comprar no Gumroad</a></p>
-    </div>
-    <div class="principio">
-      <h4><span>8</span> Segunda opinião sobre um robot de trading</h4>
-      <p>Tens um EA (MetaTrader) e queres saber se é real ou se só parece bom no backtest? Testamo-lo a sério e dizemos-te o que encontrámos, sem prometer lucros nem vender sinais. A partir de CHF 80.</p>
-      <p><a class="botao" href="LINK_SEGUNDA_OPINIAO" rel="noopener">Pedir no Gumroad</a></p>
-    </div>
+  <div class="produtos">
+    <article class="produto">
+      <div class="capa"><img src="img/capas/mentalidade.webp" alt="Capa do Guia Mentalidade 369" width="800" height="450" loading="lazy"><span class="etiqueta">Começa por aqui</span></div>
+      <div class="corpo">
+        <h3>Guia «Mentalidade 369»</h3>
+        <p>O método em três ritmos (o dia, a semana, o ciclo), as quatro armadilhas e uma página para a parede.</p>
+        <span class="formato">PDF · 6 páginas</span>
+        <div class="rodape"><span class="preco">CHF 9</span><a class="botao pequeno" href="https://mariocosta.gumroad.com/l/crcinr" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="img/capas/pacote.webp" alt="Capa do Pacote 3·6·9" width="800" height="450" loading="lazy"><span class="etiqueta ouro">3 por CHF 15</span></div>
+      <div class="corpo">
+        <h3>Pacote 3·6·9</h3>
+        <p>O Guia, o Arranque 9 Dias e o Rastreador num só ficheiro, com um guia de leitura.</p>
+        <span class="formato">PDF · 26 páginas</span>
+        <div class="rodape"><span class="preco">CHF 15<small>em separado, CHF 22</small></span><span class="botao pequeno em-breve" data-link="LINK_PACOTE">Em breve</span></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="img/capas/rastreador.webp" alt="Capa do Rastreador de Consistência" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Rastreador de Consistência</h3>
+        <p>Três métricas, 90 dias, uma cruz por dia. Celebra a linha que não quebra, não o dia heroico.</p>
+        <span class="formato">PDF · 10 páginas (A4 e A5)</span>
+        <div class="rodape"><span class="preco">CHF 6</span><span class="botao pequeno em-breve" data-link="LINK_RASTREADOR">Em breve</span></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="img/capas/arranque.webp" alt="Capa do Arranque 9 Dias" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Arranque 9 Dias</h3>
+        <p>Um desafio imprimível: uma área, um número, nove dias. No fim, uma pergunta só: o número mexeu?</p>
+        <span class="formato">PDF · 8 páginas</span>
+        <div class="rodape"><span class="preco">CHF 7</span><span class="botao pequeno em-breve" data-link="LINK_ARRANQUE">Em breve</span></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="img/capas/kitfoco.webp" alt="Capa do Kit Foco 90" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Kit Foco 90</h3>
+        <p>O bloco de 90 minutos pronto a imprimir: cartões para a porta, checklist, ritual de fecho do dia e folha de registo.</p>
+        <span class="formato">PDF · 7 páginas</span>
+        <div class="rodape"><span class="preco">CHF 9</span><span class="botao pequeno em-breve" data-link="LINK_KITFOCO">Em breve</span></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="img/capas/diario.webp" alt="Capa do Diário 369" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Diário 369</h3>
+        <p>Um planeador para escrever à mão, com páginas para o dia, a semana e o ciclo de nove semanas.</p>
+        <span class="formato">PDF · 8 páginas</span>
+        <div class="rodape"><span class="preco">CHF 12</span><span class="botao pequeno em-breve" data-link="LINK_DIARIO">Em breve</span></div>
+      </div>
+    </article>
+    <article class="produto largo">
+      <div class="capa"><img src="img/capas/academia.webp" alt="Capa da Academia 369" width="800" height="450" loading="lazy"><span class="etiqueta">O método completo</span></div>
+      <div class="corpo">
+        <h3>Academia 369</h3>
+        <p>Sete aulas escritas, cada uma com uma tarefa que deixa algo feito. Não são vídeos.</p>
+        <span class="formato">PDF · 16 páginas</span>
+        <div class="rodape"><span class="preco">CHF 19</span><span class="botao pequeno em-breve" data-link="LINK_ACADEMIA">Em breve</span></div>
+      </div>
+    </article>
+    <article class="produto largo">
+      <div class="capa"><img src="img/capas/segunda-opiniao.webp" alt="Capa da Segunda Opinião" width="800" height="450" loading="lazy"><span class="etiqueta">Serviço</span></div>
+      <div class="corpo">
+        <h3>Segunda opinião sobre um robot de trading</h3>
+        <p>Tens um EA (MetaTrader) e queres saber se é real ou se só parece bom no backtest? Testamo-lo a sério e dizemos-te o que encontrámos, sem prometer lucros nem vender sinais.</p>
+        <span class="formato">Relatório escrito</span>
+        <div class="rodape"><span class="preco">a partir de CHF 80</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/sbmgyd" rel="noopener">Pedir</a></div>
+      </div>
+    </article>
   </div>
+  <p class="loja-nota">O pagamento é feito na página segura do Gumroad, que abre numa nova janela. Produtos digitais: recebes o ficheiro logo depois da compra.</p>
 </div>
 </section>
 
@@ -382,11 +452,12 @@ footer .linhas + .linhas{margin-top:-8px}
     <a href="#principios">Como trabalhamos</a>
     <a href="mailto:hello@algo369.com">Contacto</a>
   </div>
+  <!-- LEGAL_PENDENTE (falta nome e morada do Rui)
   <div class="linhas">
     <a href="impressum.html">Impressum</a>
     <a href="privacidade.html">Privacidade</a>
     <a href="afiliados.html">Ligações de afiliado</a>
-  </div>
+  </div> -->
   <p class="fino">
     Algo369 — publicação independente sediada na Suíça. Escrevemos em português e inglês.
     O conteúdo destas páginas é informativo e não substitui aconselhamento profissional,
@@ -396,5 +467,6 @@ footer .linhas + .linhas{margin-top:-8px}
 </div>
 </footer>
 
+<script>addEventListener('load',()=>{const e=location.hash&&document.querySelector(location.hash);if(e)e.scrollIntoView()})</script>
 </body>
 </html>
