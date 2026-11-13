@@ -1,0 +1,397 @@
+<!doctype html>
+<!-- POR REVER: tradução automática, falta revisão nativa -->
+<html lang="it-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy – Algo369</title>
+<meta name="description" content="Quali dati personali passano attraverso questo sito, a chi vanno e quali diritti hai.">
+<link rel="canonical" href="https://algo369.com/it/privacy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#06101e; --bg2:#101a30; --bg3:#16203a; --border:#25304f;
+  --tx:#e8eefc; --mut:#93a0bd; --p:#7c4dff; --p2:#2dd4ff; --g:#34d399;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--tx);
+  font-family:"Inter",system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--p2)}
+.env{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+/* topo */
+header.topo{
+  position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+}
+.topo .env{display:flex;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
+.marca{
+  font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:600;
+  letter-spacing:-.01em;text-decoration:none;color:var(--tx);margin-right:auto;
+}
+.marca b{color:var(--p2);font-weight:600}
+.topo nav{display:flex;gap:22px}
+.topo nav a{
+  font-size:14px;color:var(--mut);text-decoration:none;transition:color .16s;
+}
+.topo nav a:hover{color:var(--tx)}
+.topo nav a:focus-visible,.marca:focus-visible{outline:2px solid var(--p2);outline-offset:4px;border-radius:3px}
+
+/* hero */
+.hero{padding:clamp(60px,11vw,120px) 0 clamp(48px,8vw,80px);border-bottom:1px solid var(--border)}
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(38px,6.2vw,68px);line-height:1.08;margin:0 0 22px;
+  letter-spacing:-.02em;max-width:16ch;text-wrap:balance;
+}
+.hero h1 em{font-style:italic;color:var(--p2)}
+.hero p{font-size:clamp(18px,2.2vw,21px);color:var(--mut);max-width:56ch;margin:0 0 14px}
+.selo{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:26px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);
+}
+.selo i{width:6px;height:6px;border-radius:50%;background:var(--g);display:block}
+
+/* seccoes */
+section{padding:clamp(56px,8vw,88px) 0;border-bottom:1px solid var(--border)}
+h2{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(28px,4vw,40px);margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance;
+}
+.olho{
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--p);margin-bottom:12px;font-weight:500;
+}
+.intro{color:var(--mut);max-width:62ch;margin:0 0 34px}
+
+/* artigos */
+.artigos{display:grid;gap:26px}
+article.peca{
+  background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  padding:clamp(24px,3.5vw,38px);
+}
+article.peca h3{
+  font-family:"Playfair Display",Georgia,serif;font-weight:600;
+  font-size:clamp(21px,2.7vw,27px);margin:0 0 6px;line-height:1.25;text-wrap:balance;
+}
+.meta{font-size:12.5px;color:var(--mut);margin-bottom:18px;letter-spacing:.02em}
+article.peca p{margin:0 0 15px;max-width:66ch}
+article.peca p:last-child{margin-bottom:0}
+article.peca strong{color:var(--tx);font-weight:600}
+.destaque{
+  border-left:2px solid var(--p);padding-left:18px;margin:20px 0;
+  color:var(--tx);font-family:"Playfair Display",Georgia,serif;
+  font-size:19px;font-style:italic;line-height:1.6;
+}
+
+/* principios */
+.principios{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:8px}
+.principio{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:26px}
+.principio h4{
+  font-size:15px;font-weight:600;margin:0 0 8px;color:var(--tx);
+  display:flex;align-items:center;gap:9px;
+}
+.principio h4 span{
+  font-family:"Playfair Display",Georgia,serif;color:var(--p2);font-size:19px;
+}
+.principio p{margin:0;font-size:15px;color:var(--mut)}
+
+/* contacto */
+.contacto{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+.botao{
+  display:inline-block;background:var(--p);color:#fff;text-decoration:none;
+  padding:14px 28px;border-radius:8px;font-weight:500;font-size:15px;
+  transition:opacity .16s;
+}
+.botao:hover{opacity:.9}
+.botao:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.botao.claro{background:transparent;border:1px solid var(--border);color:var(--tx)}
+
+footer{padding:44px 0 60px;color:var(--mut);font-size:14px}
+footer .linhas{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:18px}
+footer a{color:var(--mut)}
+footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
+
+@media (max-width:640px){
+  .topo nav{gap:16px}
+  .topo nav a{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* paginas legais (acrescento; o resto e copia do index.html) */
+.hero.curto{padding:clamp(48px,8vw,88px) 0 clamp(36px,6vw,56px)}
+.hero.curto h1{font-size:clamp(34px,5.4vw,56px);max-width:22ch}
+article.peca ul{margin:0 0 15px;padding-left:22px;max-width:66ch}
+article.peca li{margin-bottom:6px}
+article.peca h4{font-size:15px;font-weight:600;margin:22px 0 6px;color:var(--tx)}
+.dados{display:grid;grid-template-columns:max-content 1fr;gap:6px 22px;margin:0 0 18px}
+.dados dt{color:var(--mut);font-size:14px;padding-top:2px}
+.dados dd{margin:0;overflow-wrap:anywhere}
+.marcador{
+  font-family:ui-monospace,Consolas,monospace;font-size:.92em;
+  background:color-mix(in srgb,var(--p) 18%,transparent);
+  border:1px dashed var(--p);border-radius:4px;padding:1px 6px;
+}
+.rotulo{
+  display:inline-block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--mut);
+}
+.nota{font-size:14px;color:var(--mut)}
+footer .linhas + .linhas{margin-top:-8px}
+@media (max-width:520px){
+  .dados{grid-template-columns:1fr;gap:2px}
+  .dados dd{margin-bottom:10px}
+}
+/* seletor de lingua PT · DE · FR · EN · IT · ES */
+.lingua{display:flex;align-items:center;gap:2px;font-size:12.5px;letter-spacing:.06em;color:var(--mut)}
+.lingua a{color:var(--mut);text-decoration:none;padding:2px 5px;border-radius:3px;transition:color .16s}
+.lingua a:hover{color:var(--tx)}
+.lingua a[aria-current]{color:var(--tx);font-weight:600}
+.lingua a:focus-visible{outline:2px solid var(--p2);outline-offset:2px}
+@media (max-width:640px){
+  .topo .env{flex-wrap:wrap;row-gap:8px}
+  .lingua{order:2}
+  .topo nav{order:3;width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="env">
+    <a class="marca" href="index.html">Algo<b>369</b></a>
+    <nav>
+      <a href="index.html#guide">Guide</a>
+      <a href="index.html#negozio">Negozio</a>
+      <a href="index.html#principi">Come lavoriamo</a>
+      <a href="index.html#contatti">Contatti</a>
+    </nav>
+    <div class="lingua" role="group" aria-label="Lingua">
+      <a href="../privacidade.html" lang="pt" hreflang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../de/datenschutz.html" lang="de" hreflang="de">DE</a>
+      <span aria-hidden="true">·</span>
+      <a href="../fr/confidentialite.html" lang="fr" hreflang="fr">FR</a>
+      <span aria-hidden="true">·</span>
+      <a href="../en/privacy.html" lang="en" hreflang="en">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="privacy.html" lang="it" hreflang="it" aria-current="page">IT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../es/privacidad.html" lang="es" hreflang="es">ES</a>
+    </div>
+  </div>
+</header>
+
+<div class="env" id="topo">
+  <div class="hero curto">
+    <div class="selo"><i></i> Informazioni legali</div>
+    <h1>Privacy</h1>
+    <p>Quali dati personali passano attraverso questo sito, a chi vanno e che cosa puoi chiedere.</p>
+    <p>Scriviamo solo ciò che succede davvero. Prima di scriverlo abbiamo controllato il codice delle pagine.</p>
+  </div>
+</div>
+
+<section id="in-breve">
+<div class="env">
+  <div class="olho">In breve</div>
+  <h2>L’essenziale in cinque righe</h2>
+  <div class="artigos">
+    <article class="peca">
+      <ul>
+        <li><strong>Non usiamo cookie</strong>, né memoria locale, né pixel, né pubblicità, né strumenti di analisi del traffico.</li>
+        <li>Il sito è ospitato su <strong>GitHub Pages</strong>. GitHub registra il tuo indirizzo IP quando apri una pagina.</li>
+        <li>I caratteri tipografici vengono da <strong>Google Fonts</strong>. Il tuo browser si collega quindi a server di Google, e Google riceve il tuo indirizzo IP.</li>
+        <li>Se ci scrivi a hello@algo369.com, l’e-mail passa da <strong>Cloudflare</strong> e viene conservata in una casella <strong>Gmail</strong>.</li>
+        <li>Se acquisti qualcosa, l’acquisto e il pagamento passano da <strong>Gumroad</strong>, che ci trasmette i dati dell’acquisto.</li>
+      </ul>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="responsabile">
+<div class="env">
+  <div class="olho">Chi è responsabile dei dati</div>
+  <h2>Titolare del trattamento</h2>
+  <div class="artigos">
+    <article class="peca">
+      <dl class="dados">
+        <dt>Nome</dt>
+        <dd>Mario Rui Chaves Da Costa, attivo con il marchio «Algo369»</dd>
+        <dt>Indirizzo</dt>
+        <dd>Untergasse 40, 2502 Biel/Bienne, Svizzera</dd>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:hello@algo369.com">hello@algo369.com</a></dd>
+      </dl>
+      <p>Altre informazioni nelle <a href="note-legali.html">note legali</a>.</p>
+      <h4>Quali leggi si applicano</h4>
+      <p>La legge federale sulla protezione dei dati (LPD, RS 235.1), perché il titolare è domiciliato in Svizzera.</p>
+      <p>Il regolamento generale sulla protezione dei dati dell’Unione europea (RGPD, regolamento (UE) 2016/679), nella misura in cui si applica a visitatori e clienti nell’Unione europea (art. 3 par. 2 RGPD).</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="visita">
+<div class="env">
+  <div class="olho">Quando visiti il sito</div>
+  <h2>Che cosa succede a ogni visita</h2>
+  <p class="intro">Il sito è fatto di pagine statiche. Non ha account utente, moduli né commenti.</p>
+  <div class="artigos">
+
+    <article class="peca">
+      <h3>Hosting: GitHub Pages</h3>
+      <p>Le pagine sono servite da GitHub Pages, un servizio di GitHub, Inc. negli Stati Uniti. Come per ogni richiesta su Internet, il tuo browser invia il tuo indirizzo IP, l’indirizzo della pagina richiesta e le consuete intestazioni del browser.</p>
+      <p>GitHub dichiara che a ogni visita di un sito GitHub Pages <strong>registra e conserva l’indirizzo IP del visitatore per motivi di sicurezza</strong>, indipendentemente dal fatto che abbia un account GitHub. Noi non abbiamo accesso a queste registrazioni.</p>
+      <ul>
+        <li><strong>A che cosa serve:</strong> a servire le pagine e a proteggere il servizio.</li>
+        <li><strong>Base giuridica:</strong> il nostro interesse legittimo a mantenere il sito online in modo sicuro (art. 6 par. 1 lett. f RGPD; secondo la LPD, interesse preponderante, art. 31 LPD).</li>
+        <li><strong>Per saperne di più:</strong> <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">informativa sulla privacy di GitHub</a>.</li>
+      </ul>
+    </article>
+
+    <article class="peca">
+      <h3>Caratteri tipografici: Google Fonts</h3>
+      <p>I caratteri Inter e Playfair Display vengono caricati direttamente da server di Google (fonts.googleapis.com e fonts.gstatic.com), gestiti da Google LLC negli Stati Uniti. Per fornirli, Google riceve il tuo <strong>indirizzo IP</strong>, l’indirizzo richiesto e le intestazioni del browser, tra cui il tipo di browser e la pagina da cui arrivi.</p>
+      <p>Google dichiara che l’API di Google Fonts non imposta né memorizza cookie e che Google usa l’indirizzo IP per rispondere alla richiesta e per motivi di sicurezza.</p>
+      <ul>
+        <li><strong>A che cosa serve:</strong> a far sì che il testo appaia come è stato pensato per il sito.</li>
+        <li><strong>Base giuridica:</strong> interesse legittimo (art. 6 par. 1 lett. f RGPD; secondo la LPD, art. 31 LPD).</li>
+        <li><strong>Per saperne di più:</strong> <a href="https://fonts.google.com/faq" rel="noopener">domande frequenti su Google Fonts</a> e <a href="https://policies.google.com/privacy" rel="noopener">informativa sulla privacy di Google</a>.</li>
+      </ul>
+    </article>
+
+    <article class="peca">
+      <h3>Cookie e analisi del traffico</h3>
+      <p>Non usiamo cookie nostri, né memoria locale, né pixel di tracciamento, né strumenti di analisi del traffico, né pubblicità. Le pagine non caricano script. Per questo non ti mostriamo nemmeno un avviso sui cookie: non c’è nulla a cui tu debba acconsentire.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Link ad altri siti</h3>
+      <p>Alcuni link portano fuori dal sito, per esempio a Gumroad o, in futuro, a programmi di affiliazione. Se clicchi su uno di questi, sei sul sito di un’altra azienda, con le sue regole sulla privacy. Di solito il tuo browser le comunica che arrivi da algo369.com.</p>
+      <p>Un link affiliato serve a far sapere al programma che sei arrivato tramite noi. Per questo il programma registra il clic e può salvare un cookie nel tuo browser, <strong>sul suo sito, non sul nostro</strong>. Da questi programmi riceviamo rapporti su clic, acquisti e commissioni. Non chiediamo loro dati che ti identifichino. Tutto il resto lo spieghiamo nella pagina <a href="link-affiliati.html">Link affiliati</a>.</p>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<section id="email">
+<div class="env">
+  <div class="olho">Quando ci scrivi</div>
+  <h2>E-mail a hello@algo369.com</h2>
+  <div class="artigos">
+    <article class="peca">
+      <p>Le e-mail a hello@algo369.com vengono <strong>inoltrate tramite Cloudflare</strong> (Email Routing di Cloudflare, Inc., Stati Uniti) a una <strong>casella Gmail</strong> (Google, Stati Uniti), dove vengono conservate. Cloudflare dichiara di non conservare né consultare il contenuto dei messaggi inoltrati; Gmail li conserva come qualsiasi casella di posta.</p>
+      <p>Conserviamo ciò che ci invii: il tuo indirizzo e-mail, il tuo nome se lo indichi e il contenuto del messaggio.</p>
+      <ul>
+        <li><strong>A che cosa serve:</strong> a risponderti e a occuparci della tua richiesta.</li>
+        <li><strong>Base giuridica:</strong> il nostro interesse legittimo a rispondere (art. 6 par. 1 lett. f RGPD) oppure, se si tratta di un acquisto, l’esecuzione del contratto (lett. b); secondo la LPD, art. 31 LPD.</li>
+        <li><strong>Per quanto tempo:</strong> per il tempo necessario a chiudere la richiesta. Poi cancelliamo, salvo che la legge ci obblighi a conservare.</li>
+      </ul>
+      <p>Non usiamo il tuo indirizzo e-mail per newsletter o pubblicità.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="acquisti">
+<div class="env">
+  <div class="olho">Quando acquisti</div>
+  <h2>Acquisti tramite Gumroad</h2>
+  <div class="artigos">
+    <article class="peca">
+      <p>Il negozio vende tramite Gumroad, Inc. (Stati Uniti). L’ordine e il pagamento avvengono sul sito di Gumroad, secondo l’<a href="https://gumroad.com/privacy" rel="noopener">informativa sulla privacy di Gumroad</a>. Non vediamo e non conserviamo i dati della tua carta.</p>
+      <p>Gumroad ci trasmette i dati dell’acquisto che ci servono per gestire e seguire la vendita, per esempio il tuo indirizzo e-mail e il prodotto acquistato.</p>
+      <ul>
+        <li><strong>A che cosa serve:</strong> a consegnare il prodotto, rispondere alle domande, gestire i rimborsi e tenere la contabilità.</li>
+        <li><strong>Base giuridica:</strong> l’esecuzione del contratto (art. 6 par. 1 lett. b RGPD) e gli obblighi di legge in materia di contabilità e imposte (lett. c); secondo la LPD, art. 31 LPD.</li>
+        <li><strong>Per quanto tempo:</strong> per il tempo richiesto dalla legge in materia di contabilità e imposte.</li>
+      </ul>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="estero">
+<div class="env">
+  <div class="olho">Dove vanno i dati</div>
+  <h2>Destinatari e comunicazione all’estero</h2>
+  <div class="artigos">
+    <article class="peca">
+      <p>Non vendiamo né affittiamo dati personali. Gli unici destinatari sono i fornitori indicati sopra: GitHub, Google, Cloudflare e Gumroad. Hanno tutti sede negli <strong>Stati Uniti</strong>.</p>
+      <ul>
+        <li><strong>GitHub, Google e Cloudflare</strong> dichiarano di partecipare all’EU-US Data Privacy Framework e allo Swiss-U.S. Data Privacy Framework. La Commissione europea ritiene adeguata la protezione presso le organizzazioni certificate secondo questo quadro (decisione di esecuzione (UE) 2023/1795). Il Consiglio federale svizzero fa lo stesso per le organizzazioni certificate secondo lo Swiss-U.S. Data Privacy Framework (allegato 1 dell’ordinanza sulla protezione dei dati, OPDa, RS 235.11).</li>
+        <li><strong>Gumroad</strong> dichiara di conservare i dati negli Stati Uniti e di usare, per i trasferimenti dallo Spazio economico europeo, le clausole contrattuali tipo approvate dalla Commissione europea.</li>
+      </ul>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="diritti">
+<div class="env">
+  <div class="olho">I tuoi diritti</div>
+  <h2>Che cosa puoi chiedere</h2>
+  <div class="artigos">
+    <article class="peca">
+      <p>Puoi chiederci gratuitamente:</p>
+      <ul>
+        <li><strong>Informazioni:</strong> se trattiamo dati che ti riguardano e quali (art. 25 LPD; art. 15 RGPD).</li>
+        <li><strong>Rettifica:</strong> correggere dati sbagliati (art. 32 LPD; art. 16 RGPD).</li>
+        <li><strong>Cancellazione e limitazione:</strong> cancellare i dati o limitarne l’uso (art. 32 LPD; art. 17 e 18 RGPD).</li>
+        <li><strong>Opposizione:</strong> opporti a un trattamento basato sul nostro interesse legittimo (art. 30 e 32 LPD; art. 21 RGPD).</li>
+        <li><strong>Consegna o trasmissione:</strong> ricevere i dati che ci hai fornito in un formato elettronico di uso comune (art. 28 LPD; art. 20 RGPD).</li>
+      </ul>
+      <p>Scrivi a <a href="mailto:hello@algo369.com">hello@algo369.com</a>. Rispondiamo entro 30 giorni. Se dobbiamo verificare che sei proprio tu, ti chiediamo solo lo stretto necessario.</p>
+      <h4>Se non sei soddisfatto</h4>
+      <p>In Svizzera puoi rivolgerti all’Incaricato federale della protezione dei dati e della trasparenza (IFPDT): <a href="https://www.edoeb.admin.ch" rel="noopener">edoeb.admin.ch</a>. Nell’Unione europea hai il diritto di presentare reclamo all’autorità di protezione dei dati del Paese in cui vivi o lavori (art. 77 RGPD); in Portogallo, per esempio, è la CNPD.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="modifiche" style="border-bottom:none">
+<div class="env">
+  <div class="olho">Modifiche</div>
+  <h2>Se qualcosa cambia</h2>
+  <div class="artigos">
+    <article class="peca">
+      <p>Se cambiamo qualcosa nel sito che influisce su ciò che succede ai dati, per esempio se ospitiamo noi stessi i caratteri tipografici o aggiungiamo un nuovo servizio, aggiorniamo questa pagina prima o lo stesso giorno.</p>
+      <p class="nota">Ultimo aggiornamento: 14 novembre 2026.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="env">
+  <div class="linhas">
+    <a href="index.html#guide">Guide</a>
+    <a href="index.html#negozio">Negozio</a>
+    <a href="index.html#principi">Come lavoriamo</a>
+    <a href="mailto:hello@algo369.com">Contatti</a>
+  </div>
+  <div class="linhas">
+    <a href="note-legali.html">Note legali</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="link-affiliati.html">Link affiliati</a>
+  </div>
+  <p class="fino">
+    Algo369 – pubblicazione indipendente con sede in Svizzera. I nostri testi sono scritti originariamente in portoghese; questa versione è una traduzione.
+    Il contenuto di queste pagine ha scopo informativo e non sostituisce una consulenza professionale, medica o
+    finanziaria. Non vendiamo segnali di investimento e non promettiamo rendimenti.
+  </p>
+  <p class="fino">&copy; 2026 Algo369</p>
+</div>
+</footer>
+
+</body>
+</html>
