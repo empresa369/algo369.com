@@ -1,0 +1,408 @@
+<!doctype html>
+<!-- POR REVER: tradução automática, falta revisão nativa -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algo369 – honest guides for everyday life</title>
+<meta name="description" content="An independent publication about the home, well-being and the small decisions of everyday life. Practical guides and recommendations we only make when we can back them up.">
+<meta property="og:title" content="Algo369">
+<meta property="og:description" content="Honest guides for everyday life. We only recommend what we can back up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://algo369.com/en/">
+<meta property="og:locale" content="en_GB">
+<link rel="canonical" href="https://algo369.com/en/">
+<link rel="alternate" hreflang="pt" href="https://algo369.com/">
+<link rel="alternate" hreflang="de" href="https://algo369.com/de/">
+<link rel="alternate" hreflang="fr" href="https://algo369.com/fr/">
+<link rel="alternate" hreflang="en" href="https://algo369.com/en/">
+<link rel="alternate" hreflang="it" href="https://algo369.com/it/">
+<link rel="alternate" hreflang="es" href="https://algo369.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://algo369.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#06101e; --bg2:#101a30; --bg3:#16203a; --border:#25304f;
+  --tx:#e8eefc; --mut:#93a0bd; --p:#7c4dff; --p2:#2dd4ff; --g:#34d399;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--tx);
+  font-family:"Inter",system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--p2)}
+.env{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+/* topo */
+header.topo{
+  position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+}
+.topo .env{display:flex;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
+.marca{
+  font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:600;
+  letter-spacing:-.01em;text-decoration:none;color:var(--tx);margin-right:auto;
+}
+.marca b{color:var(--p2);font-weight:600}
+.topo nav{display:flex;gap:22px}
+.topo nav a{
+  font-size:14px;color:var(--mut);text-decoration:none;transition:color .16s;
+}
+.topo nav a:hover{color:var(--tx)}
+.topo nav a:focus-visible,.marca:focus-visible{outline:2px solid var(--p2);outline-offset:4px;border-radius:3px}
+
+/* hero */
+.hero{padding:clamp(60px,11vw,120px) 0 clamp(48px,8vw,80px);border-bottom:1px solid var(--border)}
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(38px,6.2vw,68px);line-height:1.08;margin:0 0 22px;
+  letter-spacing:-.02em;max-width:16ch;text-wrap:balance;
+}
+.hero h1 em{font-style:italic;color:var(--p2)}
+.hero p{font-size:clamp(18px,2.2vw,21px);color:var(--mut);max-width:56ch;margin:0 0 14px}
+.selo{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:26px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);
+}
+.selo i{width:6px;height:6px;border-radius:50%;background:var(--g);display:block}
+
+/* seccoes */
+section{padding:clamp(56px,8vw,88px) 0;border-bottom:1px solid var(--border)}
+h2{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(28px,4vw,40px);margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance;
+}
+.olho{
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--p);margin-bottom:12px;font-weight:500;
+}
+.intro{color:var(--mut);max-width:62ch;margin:0 0 34px}
+
+/* artigos */
+.artigos{display:grid;gap:26px}
+article.peca{
+  background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  padding:clamp(24px,3.5vw,38px);
+}
+article.peca h3{
+  font-family:"Playfair Display",Georgia,serif;font-weight:600;
+  font-size:clamp(21px,2.7vw,27px);margin:0 0 6px;line-height:1.25;text-wrap:balance;
+  hyphens:auto;
+}
+.meta{font-size:12.5px;color:var(--mut);margin-bottom:18px;letter-spacing:.02em}
+article.peca p{margin:0 0 15px;max-width:66ch}
+article.peca p:last-child{margin-bottom:0}
+article.peca strong{color:var(--tx);font-weight:600}
+.destaque{
+  border-left:2px solid var(--p);padding-left:18px;margin:20px 0;
+  color:var(--tx);font-family:"Playfair Display",Georgia,serif;
+  font-size:19px;font-style:italic;line-height:1.6;
+}
+
+section{scroll-margin-top:72px}
+/* chamada no topo */
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* loja */
+.confianca{display:flex;flex-wrap:wrap;gap:10px 24px;margin:-12px 0 36px;padding:0;list-style:none;font-size:14px;color:var(--mut)}
+.confianca li{display:flex;align-items:center;gap:9px}
+.confianca li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g)}
+.produtos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.produto{display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .18s,border-color .18s,box-shadow .18s}
+.produto:hover{transform:translateY(-3px);border-color:#3a4a75;box-shadow:0 16px 36px rgba(0,0,0,.38)}
+.produto .capa{position:relative;background:#1c1d21}
+.produto img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.etiqueta{position:absolute;top:12px;left:12px;background:rgba(6,16,30,.88);border:1px solid var(--border);color:var(--tx);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.etiqueta.ouro{color:#e8c67a;border-color:#6b5a2a}
+.produto .corpo{display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;flex:1}
+.produto h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:22px;margin:0;line-height:1.25}
+.produto p{margin:0;font-size:15px;color:var(--mut);line-height:1.6}
+.produto .formato{font-size:12.5px;letter-spacing:.04em;color:var(--mut);opacity:.85}
+.produto .rodape{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
+.preco{font-weight:600;font-size:20px;color:#e8c67a;line-height:1.2}
+.preco small{display:block;font-size:12px;font-weight:400;color:var(--mut)}
+.botao.pequeno{padding:10px 18px;font-size:14px}
+.produto.largo{grid-column:1/-1;display:grid;grid-template-columns:minmax(280px,1fr) 1.15fr}
+.produto.largo .capa{display:flex;align-items:center}
+.produto.largo .corpo{padding:28px 30px}
+.produto.largo h3{font-size:26px}
+.loja-nota{margin-top:26px;font-size:13.5px;color:var(--mut);max-width:70ch}
+@media (max-width:720px){.produto.largo{display:flex}}
+
+.em-breve{background:var(--bg3)!important;color:var(--mut)!important;cursor:default;opacity:1!important}
+/* principios */
+.principios{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:8px}
+.principio{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:26px}
+.principio h4{
+  font-size:15px;font-weight:600;margin:0 0 8px;color:var(--tx);
+  display:flex;align-items:center;gap:9px;
+}
+.principio h4 span{
+  font-family:"Playfair Display",Georgia,serif;color:var(--p2);font-size:19px;
+}
+.principio p{margin:0;font-size:15px;color:var(--mut)}
+
+/* contacto */
+.contacto{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+.botao{
+  display:inline-block;background:var(--p);color:#fff;text-decoration:none;
+  padding:14px 28px;border-radius:8px;font-weight:500;font-size:15px;
+  transition:opacity .16s;
+}
+.botao:hover{opacity:.9}
+.botao:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.botao.claro{background:transparent;border:1px solid var(--border);color:var(--tx)}
+
+footer{padding:44px 0 60px;color:var(--mut);font-size:14px}
+footer .linhas{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:18px}
+footer a{color:var(--mut)}
+footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
+footer .linhas + .linhas{margin-top:-8px}
+
+/* seletor de lingua PT · DE · FR · EN · IT · ES */
+.lingua{display:flex;align-items:center;gap:2px;font-size:12.5px;letter-spacing:.06em;color:var(--mut)}
+.lingua a{color:var(--mut);text-decoration:none;padding:2px 5px;border-radius:3px;transition:color .16s}
+.lingua a:hover{color:var(--tx)}
+.lingua a[aria-current]{color:var(--tx);font-weight:600}
+.lingua a:focus-visible{outline:2px solid var(--p2);outline-offset:2px}
+
+@media (max-width:640px){
+  .topo nav{gap:16px}
+  .topo nav a{font-size:13px}
+  .topo .env{flex-wrap:wrap;row-gap:8px}
+  .lingua{order:2}
+  .topo nav{order:3;width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="env">
+    <a class="marca" href="#topo">Algo<b>369</b></a>
+    <nav>
+      <a href="#guides">Guides</a>
+      <a href="#shop">Shop</a>
+      <a href="#principles">How we work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lingua" role="group" aria-label="Language">
+      <a href="../index.html" lang="pt" hreflang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../de/index.html" lang="de" hreflang="de">DE</a>
+      <span aria-hidden="true">·</span>
+      <a href="../fr/index.html" lang="fr" hreflang="fr">FR</a>
+      <span aria-hidden="true">·</span>
+      <a href="index.html" lang="en" hreflang="en" aria-current="page">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="../it/index.html" lang="it" hreflang="it">IT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../es/index.html" lang="es" hreflang="es">ES</a>
+    </div>
+  </div>
+</header>
+
+<div class="env" id="topo">
+  <div class="hero">
+    <div class="selo"><i></i> Independent publication · Switzerland</div>
+    <h1>Honest guides for <em>everyday life</em>.</h1>
+    <p>We write about the home, well-being and the small decisions we all make every day.</p>
+    <p>We only recommend what we have used ourselves or can back up. When we don’t know something, we say so.</p>
+    <div class="acoes"><a class="botao" href="#shop">Visit the shop</a><a class="botao claro" href="#guides">Read the guides</a></div>
+  </div>
+</div>
+
+<!-- ================= GUIDES ================= -->
+<section id="guides">
+<div class="env">
+  <div class="olho">Guides</div>
+  <h2>What we have written</h2>
+  <p class="intro">Long, unhurried pieces about things worth understanding properly, once.</p>
+
+  <div class="artigos">
+
+    <article class="peca">
+      <h3>The monstera doesn’t have holes by chance</h3>
+      <div class="meta">Plants · 5 min read</div>
+      <p>Almost everyone who buys a monstera asks the same question a few months later: <em>why are the new leaves coming out without any holes?</em> The answer says a lot about the plant – and about the spot you have put it in.</p>
+      <p>These cuts are called <strong>fenestrations</strong>, and they are neither a defect nor a disease. There are two accepted explanations, and both have to do with where the plant comes from: the damp, shady floor of the tropical forests of southern Mexico, Guatemala and Panama. There, the monstera is not a pot plant but a climber that clings to tree trunks and grows towards the light. It can reach more than twenty metres in height.</p>
+      <p>The first explanation is light. Under a huge, solid leaf, everything is in the dark. Through the holes, light reaches the lower leaves of the same plant. The second is wind and rain: a leaf full of openings survives a tropical storm without tearing.</p>
+      <div class="destaque">A young plant has whole leaves. The holes only come as it matures – and that happens faster with indirect light and room to climb.</div>
+      <p>That leads to the practical part. If your monstera is producing small, solid leaves, it is almost always down to one of two things: <strong>too little light</strong> or <strong>nothing to climb</strong>. A moss pole changes how the plant looks more than any fertiliser.</p>
+      <p>And the aerial roots growing out of the stem are neither a problem nor dirt – that is how it holds on to trees. You can guide them into the soil in the pot.</p>
+      <p>About the name: <em>Monstera</em> comes from the Latin <em>monstrum</em>, because of the almost monstrous size of the leaves. <em>Deliciosa</em> refers to the fruit. It is edible and tastes like a mix of pineapple and banana – but only when it is fully ripe. Unripe, it irritates the mouth because of its calcium oxalate crystals. Indoors, in practice, a monstera almost never bears fruit.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Aloe vera is more likely to die of too much love than of neglect</h3>
+      <div class="meta">Plants · 4 min read</div>
+      <p>It is one of the best-selling plants in the world and one of those that most often die at home – almost always for the same reason. And that reason is the opposite of what you might think.</p>
+      <p>Aloe vera comes from the Arabian Peninsula, from dry, stony ground. It has been cultivated for so long that it is hard to find truly wild: it has travelled with people for thousands of years. It appears on Sumerian clay tablets from around 2100 BC and in the Egyptian Ebers Papyrus, from around 1550 BC, which describes medicinal preparations.</p>
+      <p>The fleshy leaves are a reservoir. Inside, they hold a gel that is almost entirely water – that is how the plant gets through months without rain. The same gel has been used for centuries to soothe sunburn and minor skin irritation.</p>
+      <div class="destaque">It comes from the desert. It wants sun, free-draining soil and very little water. In winter, it can go a month without watering.</div>
+      <p>The most common mistake: treating it like other houseplants – watering once a week, good rich soil, a pot without a drainage hole. After three months, the leaves turn soft and glassy. That is not thirst but the opposite: the roots have rotted.</p>
+      <p>A practical tip few people know: under the green skin there is a yellow layer, the so-called <strong>latex</strong> or aloin, which tastes very bitter. What goes on the skin is the clear gel from the centre, not that layer.</p>
+      <p>And the story that Cleopatra used it is exactly that: a legend. There is no evidence for it. But it shows how long this plant has had a reputation.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Watts tell you nothing about a vacuum cleaner’s power</h3>
+      <div class="meta">Home · 5 min read</div>
+      <p>It is the number printed large on the box, and the number almost everyone compares. It is also the number that tells you the least.</p>
+      <p><strong>Watts measure consumption, not suction.</strong> The figure tells you how much electricity the appliance uses, not how much work it does with it. A badly designed 1200 W motor can suck worse than a well-designed 500 W one – the difference is lost as heat and noise.</p>
+      <p>Since 2017, this is no longer theory. European Regulation 666/2013 has since limited household vacuum cleaners to <strong>900 W</strong>. Many people thought vacuum cleaners would become weak as a result. They didn’t: manufacturers had to improve the design instead of making the motor bigger.</p>
+      <div class="destaque">If a manufacturer gives you the watts as the only number, that already tells you something about the appliance.</div>
+      <p>The numbers worth looking for are different ones:</p>
+      <p><strong>Air watts (AW)</strong> – measures suction power at the outlet, that is, after the losses in the tube and the nozzle. It is the closest to what you feel when you vacuum. In good cordless vacuums, it is between 100 and 250 AW.<br>
+         <strong>Pascals (Pa) or kPa</strong> – measures the negative pressure the motor can create. Useful for comparing, but not enough on its own: lots of negative pressure with little airflow lifts fine dust and leaves the rest behind.<br>
+         <strong>Airflow (litres per second)</strong> – this is what carries away the coarser dirt.</p>
+      <p>Suction only helps if the air can get through. A half-full bag, a dirty filter or a blocked tube drag down the performance of any appliance, however expensive it was. <strong>Cleaning the filter does more than changing the vacuum cleaner</strong> – and it is the maintenance almost nobody does.</p>
+      <p>One more word on comparing corded and cordless models: modern cordless vacuums win on convenience and lose on run time at the strongest setting. If your home is large, what matters is not the maximum suction but <em>how many minutes</em> the appliance lasts at that setting. That is usually much less than stated, because the stated figure refers to the weakest setting.</p>
+    </article>
+
+    <article class="peca">
+      <h3>What a HEPA filter really does – and what it doesn’t</h3>
+      <div class="meta">Home · 5 min read</div>
+      <p>“HEPA” has become a kind of seal of quality and appears on things that have nothing to do with one another. It is worth knowing what the word means, because the meaning is precisely defined.</p>
+      <p>A true HEPA filter retains <strong>99.97% of particles of 0.3 micrometres</strong>. That figure was not chosen at random, and the explanation surprises almost everyone.</p>
+      <div class="destaque">0.3 µm is the size that is <em>hardest</em> to capture. Larger and smaller particles are filtered even more effectively.</div>
+      <p>It sounds contradictory, but it isn’t. Large particles hit the fibres and get stuck. Very small ones move erratically (Brownian motion) and so they also end up hitting a fibre. Particles of 0.3 µm slip best between the two effects – which is why the worst case is measured at this size. A filter that retains 99.97% in the worst case retains more of everything else.</p>
+      <p>Two traps when buying:</p>
+      <p><strong>“HEPA-type” or “HEPA-like” is not HEPA.</strong> These expressions have no legal definition and can appear on a filter that retains 85%. The word that counts comes with a standard – in Europe, EN 1822, with classes from H13 upwards.</p>
+      <p><strong>The filter is not the appliance.</strong> A good filter in an air purifier that barely moves any air cleans very little. What matters is the <strong>CADR</strong> (Clean Air Delivery Rate) in cubic metres per hour: it tells you how much clean air the appliance actually delivers. A 20 m² room with a normal ceiling height needs much more CADR than the box usually suggests.</p>
+      <p>And what a HEPA filter <em>can’t</em> do: remove gases and odours. It retains the particles in smoke, but the smell of smoke, volatile organic compounds and the smell of fresh paint are gases, not particles. For those you need activated carbon. That is a different filter, and it wears out faster.</p>
+      <p>If you suffer from allergies, you will notice the difference above all in the bedroom and at night. A good appliance in the right place does more than a huge appliance in the living room.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Lavender doesn’t want to be fussed over</h3>
+      <div class="meta">Plants · 4 min read</div>
+      <p>Some plants die because nobody looks after them. Lavender dies of the opposite – and that is why so many people give up after the first pot.</p>
+      <p>In the wild, it grows on the dry limestone slopes of the western Mediterranean: in Provence, in Catalonia, in the mountains of Italy. Poor soil, lots of stone, sun all day. The purple fields in the photos are cultivated, but the plant really does come from there.</p>
+      <p>Everything else follows from that. <strong>Rich, damp soil kills it.</strong> It usually goes like this: you buy lavender, plant it in good, dark compost from the bag and water it twice a week like the others – and after two months it turns grey in the middle and never recovers. That wasn’t thirst; it was root rot.</p>
+      <div class="destaque">The sunniest spot you have, very free-draining soil and infrequent watering. When in doubt: don’t water.</div>
+      <p>About the scent: it comes from essential oils held in tiny hairs on the surface of the leaves and flowers. For the plant, they are not perfume but protection against insects and heat. When you rub the leaves between your fingers, those hairs burst – which is why the scent stays on your hands.</p>
+      <p>The name also gives away what it was used for: it goes back to the Latin <em>lavare</em>, to wash. The Romans added lavender to bath water and to laundry. The gesture still lives in the name.</p>
+      <p>Something practical that changes how the plant looks after a few years: <strong>cut it back after flowering</strong>, but not into the old wood. Without this pruning, lavender turns woody from the bottom and gets straggly, and then there is nothing more to be done.</p>
+      <p>And if you have a balcony: a single plant changes how many bees come by. That is exactly why lavender honey has its own flavour.</p>
+    </article>
+
+    <article class="peca">
+      <h3>The finger test: watering without a calendar</h3>
+      <div class="meta">Plants · 3 min read</div>
+      <p>Most houseplants that die don’t die of thirst. They die of too much water – almost always because someone decided to water “every Wednesday”.</p>
+      <p>The problem with the calendar: the plant doesn’t live by the calendar. The same plant drinks much more in July with the window open than in January with the heating on and short days. If you always water the same way, you are right for half the year and wrong for the other half.</p>
+      <div class="destaque">Push your finger into the soil up to the second knuckle. If it is damp, don’t water. If it is dry, water thoroughly until water runs out of the bottom.</div>
+      <p>It is simple and works for most houseplants. Two exceptions worth knowing:</p>
+      <p><strong>Succulents, aloe and cacti</strong> – wait until the soil is <em>completely</em> dry, not just on the surface. In winter, weeks can go by without water.<br>
+         <strong>Ferns and fine-leaved plants</strong> – want soil that is always slightly moist, but never wet feet.</p>
+      <p>Signs of too much water: yellow, soft leaves, soil that smells musty, small flies around the pot. Signs of too little: limp but still firm leaves, soil pulling away from the edge of the pot.</p>
+      <p>The two are often confused because <strong>the leaves droop in both cases</strong>. You can feel the difference when you touch them: limp and soft means too much water; limp and dry means too little.</p>
+      <p>And the most important thing, which has nothing to do with watering: <strong>the pot needs a drainage hole.</strong> A decorative pot without drainage turns any correct watering into standing water around the roots. If you like the pot, use it as an outer pot – the plant stays in a plastic pot with holes and goes inside it.</p>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- ================= SHOP ================= -->
+<section id="shop">
+<div class="env">
+  <div class="olho">Shop</div>
+  <h2>What we sell today</h2>
+  <p class="intro">Only what exists and can be bought right now is listed here. When there is more, it will appear here – not before.</p>
+
+  <p class="intro">In English, so far there is only the guide: a PDF to read or print, delivered instantly through Gumroad. If it is no use to you, write to us and we will refund your money.</p>
+
+  <ul class="confianca">
+    <li>PDF in English, delivered instantly</li>
+    <li>Secure payment via Gumroad</li>
+    <li>Prices in Swiss francs</li>
+  </ul>
+
+  <div class="produtos">
+    <article class="produto largo">
+      <div class="capa"><img src="../img/capas/guia-en.webp" alt="Cover of the Mindset 369 guide" width="800" height="450" loading="lazy"><span class="etiqueta">Start here</span></div>
+      <div class="corpo">
+        <h3>The “Mindset 369” guide</h3>
+        <p>The method in three rhythms (the day, the week, the cycle), the four traps and a page for the wall.</p>
+        <span class="formato">PDF · 4 pages</span>
+        <div class="rodape"><span class="preco">CHF 9</span><span class="botao pequeno em-breve" data-link="LINK_GUIA_EN">Coming soon</span></div>
+      </div>
+    </article>
+  </div>
+  <p class="loja-nota">All our other products are only available in Portuguese for now. You can find them in the <a href="../index.html#loja" hreflang="pt">Portuguese shop</a>.</p>
+</div>
+</section>
+
+<!-- ================= PRINCIPLES ================= -->
+<section id="principles">
+<div class="env">
+  <div class="olho">How we work</div>
+  <h2>The rules we stick to</h2>
+  <p class="intro">We write them down here so that you can hold us to them.</p>
+
+  <div class="principios">
+    <div class="principio">
+      <h4><span>1</span> We don’t promise results</h4>
+      <p>We don’t say that something will change your life. We describe what it is, what it is good for and where it falls short.</p>
+    </div>
+    <div class="principio">
+      <h4><span>2</span> We say what we don’t know</h4>
+      <p>If we haven’t tested something, we write that we haven’t tested it. If something is a legend and not a fact, we say so too.</p>
+    </div>
+    <div class="principio">
+      <h4><span>3</span> Disclosed links</h4>
+      <p>If one day we earn a commission on a link, it will say so on the same page, in plain words.</p>
+    </div>
+    <div class="principio">
+      <h4><span>4</span> No coupons, no time pressure</h4>
+      <p>We don’t publish discount codes, countdowns or offers that expire. That sells, but it doesn’t inform.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" style="border-bottom:none">
+<div class="env">
+  <div class="olho">Contact</div>
+  <h2>Write to us</h2>
+  <p class="intro">Topic suggestions, corrections or proposals – we reply to everything written by a person.</p>
+  <div class="contacto">
+    <a class="botao" href="mailto:hello@algo369.com">hello@algo369.com</a>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="env">
+  <div class="linhas">
+    <a href="#guides">Guides</a>
+    <a href="#shop">Shop</a>
+    <a href="#principles">How we work</a>
+    <a href="mailto:hello@algo369.com">Contact</a>
+  </div>
+  <div class="linhas">
+    <a href="imprint.html">Imprint</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="affiliate-links.html">Affiliate links</a>
+  </div>
+  <p class="fino">
+    Algo369 – an independent publication based in Switzerland. Our texts are originally written in Portuguese; this version is a translation.
+    The content of these pages is for information only and does not replace professional, medical or
+    financial advice. We do not sell investment signals and we do not promise returns.
+  </p>
+  <p class="fino">&copy; 2026 Algo369</p>
+</div>
+</footer>
+
+<script>addEventListener('load',()=>{const e=location.hash&&document.querySelector(location.hash);if(e)e.scrollIntoView()})</script>
+</body>
+</html>

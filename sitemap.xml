@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://algo369.com/</loc><lastmod>2026-11-14</lastmod><priority>1.0</priority></url>
-  <url><loc>https://algo369.com/de/</loc><lastmod>2026-11-13</lastmod><priority>0.9</priority></url>
+  <url><loc>https://algo369.com/de/</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://algo369.com/fr/</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://algo369.com/en/</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://algo369.com/it/</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
+  <url><loc>https://algo369.com/es/</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://algo369.com/impressum.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
   <url><loc>https://algo369.com/privacidade.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
   <url><loc>https://algo369.com/afiliados.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
   <url><loc>https://algo369.com/de/impressum.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
   <url><loc>https://algo369.com/de/datenschutz.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
   <url><loc>https://algo369.com/de/affiliate-links.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/fr/mentions-legales.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/fr/confidentialite.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/fr/liens-affilies.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/en/imprint.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/en/privacy.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/en/affiliate-links.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/it/note-legali.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/it/privacy.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/it/link-affiliati.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/es/aviso-legal.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/es/privacidad.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
+  <url><loc>https://algo369.com/es/enlaces-afiliados.html</loc><lastmod>2026-11-14</lastmod><priority>0.3</priority></url>
 </urlset>
