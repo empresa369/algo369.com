@@ -1,0 +1,10 @@
+Poly Haven (https://polyhaven.com) - modelos 3D (pasta ph/) e texturas (pasta tx/)
+
+Licença: CC0 1.0 Universal (domínio público)
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Uso livre, incluindo comercial, sem obrigação de atribuição.
+Atribuição voluntária: «Modelos e texturas de Poly Haven (polyhaven.com), CC0».
+
+Descarregados a 21/11/2026 através da API pública de polyhaven.com.
+Texturas reduzidas a 512 px e modelos convertidos para glTF (.json) pela Algo369.

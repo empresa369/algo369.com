@@ -1,0 +1,30 @@
+{
+ "name": "Casa369 — a sua casa em 3D",
+ "short_name": "Casa369",
+ "lang": "pt-BR",
+ "description": "Desenhe a casa em 3D, no seu terreno, escolha acabamentos, mobilie e veja o orçamento de material.",
+ "start_url": "/casa369/",
+ "scope": "/casa369/",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#f4f1ea",
+ "theme_color": "#0d1424",
+ "icons": [
+  {
+   "src": "icone-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icone-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icone-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
