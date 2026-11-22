@@ -126,6 +126,7 @@ section{scroll-margin-top:72px}
 .produto .rodape{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
 .preco{font-weight:600;font-size:20px;color:#e8c67a;line-height:1.2}
 .preco small{display:block;font-size:12px;font-weight:400;color:var(--mut)}
+.demo-btn{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:none;border:1px solid var(--border);color:var(--tx);border-radius:99px;padding:6px 14px;font:500 13px Inter,system-ui,sans-serif;cursor:pointer}.demo-btn:hover{border-color:var(--p2)}#demo-dlg{border:0;padding:0;background:#000;border-radius:14px;max-width:min(92vw,420px);width:100%}#demo-dlg::backdrop{background:rgba(3,8,18,.82)}#demo-dlg video{display:block;width:100%;max-height:86vh;background:#000}#demo-dlg button{position:absolute;top:8px;right:8px;z-index:2;background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:99px;width:34px;height:34px;font-size:18px;cursor:pointer}
 .produto .capa a,.produto h3 a{color:inherit;text-decoration:none;display:block}.produto h3 a:hover{text-decoration:underline}.carrinho{border:1px solid currentColor;border-radius:99px;padding:2px 10px;white-space:nowrap}.topo nav{flex-wrap:wrap;row-gap:8px;align-items:center}.topo nav a{white-space:nowrap}
 .botao.pequeno{padding:10px 18px;font-size:14px}
 .produto.largo{grid-column:1/-1;display:grid;grid-template-columns:minmax(280px,1fr) 1.15fr}
@@ -229,7 +230,7 @@ footer .linhas + .linhas{margin-top:-8px}
   <h2>Was wir heute verkaufen</h2>
 
   <div class="produtos">
-    <article class="produto">
+    <article id="leitfaden369" class="produto">
       <div class="capa"><img src="../img/capas/leitfaden.webp" alt="Titelbild des Leitfadens Mentalität 369" width="800" height="450" loading="lazy"><span class="etiqueta">Hier anfangen</span></div>
       <div class="corpo">
         <h3>Leitfaden «Mentalität 369»</h3>
@@ -238,7 +239,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 9.–</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/leitfaden369" rel="noopener">Kaufen</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="paket369" class="produto">
       <div class="capa"><img src="../img/capas/paket-de.webp" alt="Titelbild des Pakets 3·6·9" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Paket 3·6·9</h3>
@@ -247,7 +248,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 15.–<small>einzeln CHF 22.–</small></span><a class="botao pequeno" href="https://algo369.gumroad.com/l/paket369" rel="noopener">Kaufen</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="tracker369" class="produto">
       <div class="capa"><img src="../img/capas/tracker-de.webp" alt="Titelbild des Beständigkeits-Trackers 369" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Beständigkeits-Tracker 369</h3>
@@ -256,7 +257,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 6.–</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/tracker369" rel="noopener">Kaufen</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="9tagestart" class="produto">
       <div class="capa"><img src="../img/capas/9tagestart-de.webp" alt="Titelbild des 9-Tage-Starts" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>9-Tage-Start</h3>
@@ -265,7 +266,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 7.–</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/9tagestart" rel="noopener">Kaufen</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="fokuskit90" class="produto">
       <div class="capa"><img src="../img/capas/fokuskit-de.webp" alt="Titelbild des Fokus-Kits 90" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Fokus-Kit 90</h3>
@@ -274,7 +275,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 9.–</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/fokuskit90" rel="noopener">Kaufen</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="tagebuch369" class="produto">
       <div class="capa"><img src="../img/capas/tagebuch-de.webp" alt="Titelbild des Tagebuchs 369" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Tagebuch 369</h3>
@@ -283,7 +284,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 12.–</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/tagebuch369" rel="noopener">Kaufen</a></div>
       </div>
     </article>
-    <article class="produto largo">
+    <article id="koerper369" class="produto largo">
       <div class="capa"><img src="../img/capas/koerper-de.webp" alt="Titelbild von Körper 369" width="800" height="450" loading="lazy"><span class="etiqueta">Neu</span></div>
       <div class="corpo">
         <h3>Körper 369</h3>
@@ -292,7 +293,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 9.–</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/koerper369" rel="noopener">Kaufen</a></div>
       </div>
     </article>
-    <article class="produto largo">
+    <article id="akademie369" class="produto largo">
       <div class="capa"><img src="../img/capas/akademie-de.webp" alt="Titelbild der Akademie 369" width="800" height="450" loading="lazy"><span class="etiqueta">Die ganze Methode</span></div>
       <div class="corpo">
         <h3>Akademie 369</h3>
@@ -467,6 +468,27 @@ footer .linhas + .linhas{margin-top:-8px}
 </div>
 </footer>
 
+<dialog id="demo-dlg" aria-label="Demonstrationsvideo"><button type="button" aria-label="Schliessen">✕</button><video controls playsinline preload="none"></video></dialog>
+<script>
+// 22/11: botão «So funktioniert’s» em cada produto que já tem vídeo de demonstração (voz do Rui gerada por IA).
+(function(){
+  var DEMOS={leitfaden369:1,paket369:1,tracker369:1,"9tagestart":1,fokuskit90:1,tagebuch369:1,koerper369:1,akademie369:1};
+  var base="../video/";
+  var dlg=document.getElementById("demo-dlg"); if(!dlg||!dlg.showModal) return;
+  var v=dlg.querySelector("video");
+  function fechar(){v.pause();dlg.close();}
+  dlg.querySelector("button").addEventListener("click",fechar);
+  dlg.addEventListener("click",function(e){if(e.target===dlg)fechar();});
+  dlg.addEventListener("close",function(){v.pause();});
+  document.querySelectorAll("article.produto").forEach(function(p){
+    var b=p.querySelector('a[href*="gumroad.com/l/"]'); if(!b) return;
+    var slug=(b.href.split("/l/")[1]||"").split(/[?#]/)[0]; if(!DEMOS[slug]) return;
+    var bt=document.createElement("button"); bt.type="button"; bt.className="demo-btn"; bt.textContent="▶ So funktioniert’s (Video)";
+    bt.addEventListener("click",function(){v.src=base+"demo_de_"+slug+".mp4"; v.poster=base+"demo_de_"+slug+".jpg"; dlg.showModal(); var pr=v.play(); if(pr&&pr.catch)pr.catch(function(){});});
+    var f=p.querySelector(".formato"); (f&&f.parentNode?f.parentNode.insertBefore(bt,f.nextSibling):p.querySelector(".corpo").appendChild(bt));
+  });
+})();
+</script>
 <script>
 // 22/11: clicar na capa ou no título abre a página do produto (Gumroad, por cima do site) com «adicionar ao carrinho».
 document.querySelectorAll("article.produto").forEach(function(p){

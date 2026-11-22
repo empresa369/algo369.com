@@ -360,7 +360,7 @@ document.querySelectorAll(".lingua a[hreflang]").forEach(function(a){a.addEventL
   dlg.addEventListener("close",function(){v.pause();});
   document.querySelectorAll("[data-demo]").forEach(function(bt){
     var slug=bt.getAttribute("data-demo"); if(!DEMOS[slug]) return;
-    bt.addEventListener("click",function(){v.src=base+"demo_"+slug+".mp4"; v.poster=base+"demo_"+slug+".jpg"; dlg.showModal(); try{v.play()}catch(e){}});
+    bt.addEventListener("click",function(){v.src=base+"demo_"+slug+".mp4"; v.poster=base+"demo_"+slug+".jpg"; dlg.showModal(); var pr=v.play(); if(pr&&pr.catch)pr.catch(function(){});});
   });
 })();
 </script>
