@@ -143,6 +143,7 @@ section{scroll-margin-top:72px}
 .preco{font-weight:600;font-size:20px;color:#e8c67a;line-height:1.2}
 .preco small{display:block;font-size:12px;font-weight:400;color:var(--mut)}
 .produto .capa a,.produto h3 a{color:inherit;text-decoration:none;display:block}.produto h3 a:hover{text-decoration:underline}.carrinho{border:1px solid currentColor;border-radius:99px;padding:2px 10px;white-space:nowrap}.topo nav{flex-wrap:wrap;row-gap:8px;align-items:center}.topo nav a{white-space:nowrap}
+.demo-btn{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:none;border:1px solid var(--border);color:var(--tx);border-radius:99px;padding:6px 14px;font:500 13px Inter,system-ui,sans-serif;cursor:pointer}.demo-btn:hover{border-color:var(--p2)}#demo-dlg{border:0;padding:0;background:#000;border-radius:14px;max-width:min(92vw,420px);width:100%}#demo-dlg::backdrop{background:rgba(3,8,18,.82)}#demo-dlg video{display:block;width:100%;max-height:86vh;background:#000}#demo-dlg button{position:absolute;top:8px;right:8px;z-index:2;background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:99px;width:34px;height:34px;font-size:18px;cursor:pointer}
 .botao.pequeno{padding:10px 18px;font-size:14px}
 .produto.largo{grid-column:1/-1;display:grid;grid-template-columns:minmax(280px,1fr) 1.15fr}
 .produto.largo .capa{display:flex;align-items:center}
@@ -550,6 +551,27 @@ footer .linhas + .linhas{margin-top:-8px}
 <script>
 document.querySelectorAll(".lingua a[hreflang]").forEach(function(a){a.addEventListener("click",function(){
   try{localStorage.setItem("algo369_lingua",a.getAttribute("hreflang"))}catch(e){}});});
+</script>
+<dialog id="demo-dlg" aria-label="Vídeo de demonstração"><button type="button" aria-label="Fechar">✕</button><video controls playsinline preload="none"></video></dialog>
+<script>
+// 22/11: botão «Como funciona» em cada produto que já tem vídeo de demonstração (voz do Rui gerada por IA).
+(function(){
+  var DEMOS={kitfoco90:1,pacote369:1};
+  var base=location.pathname.indexOf("/br/")>-1?"../video/":"video/";
+  var dlg=document.getElementById("demo-dlg"); if(!dlg||!dlg.showModal) return;
+  var v=dlg.querySelector("video");
+  function fechar(){v.pause();dlg.close();}
+  dlg.querySelector("button").addEventListener("click",fechar);
+  dlg.addEventListener("click",function(e){if(e.target===dlg)fechar();});
+  dlg.addEventListener("close",function(){v.pause();});
+  document.querySelectorAll("article.produto").forEach(function(p){
+    var b=p.querySelector('a[href*="gumroad.com/l/"]'); if(!b) return;
+    var slug=(b.href.split("/l/")[1]||"").split(/[?#]/)[0]; if(!DEMOS[slug]) return;
+    var bt=document.createElement("button"); bt.type="button"; bt.className="demo-btn"; bt.textContent="▶ Como funciona (vídeo)";
+    bt.addEventListener("click",function(){v.src=base+"demo_"+slug+".mp4"; v.poster=base+"demo_"+slug+".jpg"; dlg.showModal(); try{v.play()}catch(e){}});
+    var f=p.querySelector(".formato"); (f&&f.parentNode?f.parentNode.insertBefore(bt,f.nextSibling):p.querySelector(".corpo").appendChild(bt));
+  });
+})();
 </script>
 <script>
 // 22/11: clicar na capa ou no título abre a página do produto (Gumroad, por cima do site) com «adicionar ao carrinho».
