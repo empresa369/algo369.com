@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algo369 — guias honestos para o dia a dia</title>
+<meta name="description" content="Publicação independente sobre casa, bem-estar e escolhas do dia a dia. Guias práticos e recomendações que só fazemos quando conseguimos justificá-las.">
+<meta property="og:title" content="Algo369">
+<meta property="og:description" content="Guias honestos para o dia a dia. Só recomendamos o que conseguimos justificar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://algo369.com/br/">
+<link rel="canonical" href="https://algo369.com/br/">
+<link rel="alternate" hreflang="pt-PT" href="https://algo369.com/">
+<link rel="alternate" hreflang="pt-BR" href="https://algo369.com/br/">
+<link rel="alternate" hreflang="de" href="https://algo369.com/de/">
+<link rel="alternate" hreflang="fr" href="https://algo369.com/fr/">
+<link rel="alternate" hreflang="en" href="https://algo369.com/en/">
+<link rel="alternate" hreflang="it" href="https://algo369.com/it/">
+<link rel="alternate" hreflang="es" href="https://algo369.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://algo369.com/">
+<script>
+/* Página BR: abre a loja na língua do celular (só na entrada direta por /br/, ex.: link da bio).
+   Se o navegador estiver em português (pt-BR ou outro pt), a pessoa fica aqui.
+   Quem escolhe uma língua no topo fica com essa escolha. Robôs de busca não são redirecionados. */
+(function(){try{
+  var L=["de","fr","en","it","es"],K="algo369_lingua",p=location.pathname,s=null;
+  if(p!=="/br/"&&p!=="/br/index.html")return;
+  if(/bot|crawl|spider|slurp|facebookexternalhit|preview/i.test(navigator.userAgent))return;
+  try{s=localStorage.getItem(K)}catch(e){}
+  var r=document.referrer||"";
+  if(r&&r.indexOf("//"+location.host+"/")>-1){try{localStorage.setItem(K,"pt-BR")}catch(e){}return;}
+  function ir(c){location.replace("/"+c+"/"+location.search+location.hash)}
+  if(s){if(L.indexOf(s)>-1)ir(s);return;}
+  var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||""];
+  for(var i=0;i<ls.length;i++){var c=String(ls[i]||"").toLowerCase().slice(0,2);if(c==="gs")c="de";
+    if(c==="pt")return; if(L.indexOf(c)>-1){ir(c);return;}}
+}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#06101e; --bg2:#101a30; --bg3:#16203a; --border:#25304f;
+  --tx:#e8eefc; --mut:#93a0bd; --p:#7c4dff; --p2:#2dd4ff; --g:#34d399;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--tx);
+  font-family:"Inter",system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--p2)}
+.env{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+/* topo */
+header.topo{
+  position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+}
+.topo .env{display:flex;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
+.marca{
+  font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:600;
+  letter-spacing:-.01em;text-decoration:none;color:var(--tx);margin-right:auto;
+}
+.marca b{color:var(--p2);font-weight:600}
+.topo nav{display:flex;gap:22px}
+.topo nav a{
+  font-size:14px;color:var(--mut);text-decoration:none;transition:color .16s;
+}
+.topo nav a:hover{color:var(--tx)}
+.topo nav a:focus-visible,.marca:focus-visible{outline:2px solid var(--p2);outline-offset:4px;border-radius:3px}
+
+/* hero */
+.hero{padding:clamp(60px,11vw,120px) 0 clamp(48px,8vw,80px);border-bottom:1px solid var(--border)}
+.hero h1{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(38px,6.2vw,68px);line-height:1.08;margin:0 0 22px;
+  letter-spacing:-.02em;max-width:16ch;text-wrap:balance;
+}
+.hero h1 em{font-style:italic;color:var(--p2)}
+.hero p{font-size:clamp(18px,2.2vw,21px);color:var(--mut);max-width:56ch;margin:0 0 14px}
+.selo{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:26px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);
+}
+.selo i{width:6px;height:6px;border-radius:50%;background:var(--g);display:block}
+
+/* seccoes */
+section{padding:clamp(56px,8vw,88px) 0;border-bottom:1px solid var(--border)}
+h2{
+  font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(28px,4vw,40px);margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance;
+}
+.olho{
+  font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--p);margin-bottom:12px;font-weight:500;
+}
+.intro{color:var(--mut);max-width:62ch;margin:0 0 34px}
+
+/* artigos */
+.artigos{display:grid;gap:26px}
+article.peca{
+  background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  padding:clamp(24px,3.5vw,38px);
+}
+article.peca h3{
+  font-family:"Playfair Display",Georgia,serif;font-weight:600;
+  font-size:clamp(21px,2.7vw,27px);margin:0 0 6px;line-height:1.25;text-wrap:balance;
+}
+.meta{font-size:12.5px;color:var(--mut);margin-bottom:18px;letter-spacing:.02em}
+article.peca p{margin:0 0 15px;max-width:66ch}
+article.peca p:last-child{margin-bottom:0}
+article.peca strong{color:var(--tx);font-weight:600}
+.destaque{
+  border-left:2px solid var(--p);padding-left:18px;margin:20px 0;
+  color:var(--tx);font-family:"Playfair Display",Georgia,serif;
+  font-size:19px;font-style:italic;line-height:1.6;
+}
+
+section{scroll-margin-top:72px}
+/* chamada no topo */
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* loja */
+.confianca{display:flex;flex-wrap:wrap;gap:10px 24px;margin:-12px 0 36px;padding:0;list-style:none;font-size:14px;color:var(--mut)}
+.confianca li{display:flex;align-items:center;gap:9px}
+.confianca li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g)}
+.produtos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.produto{display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:transform .18s,border-color .18s,box-shadow .18s}
+.produto:hover{transform:translateY(-3px);border-color:#3a4a75;box-shadow:0 16px 36px rgba(0,0,0,.38)}
+.produto .capa{position:relative;background:#1c1d21}
+.produto img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.etiqueta{position:absolute;top:12px;left:12px;background:rgba(6,16,30,.88);border:1px solid var(--border);color:var(--tx);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.etiqueta.ouro{color:#e8c67a;border-color:#6b5a2a}
+.produto .corpo{display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;flex:1}
+.produto h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:22px;margin:0;line-height:1.25}
+.produto p{margin:0;font-size:15px;color:var(--mut);line-height:1.6}
+.produto .formato{font-size:12.5px;letter-spacing:.04em;color:var(--mut);opacity:.85}
+.produto .rodape{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
+.preco{font-weight:600;font-size:20px;color:#e8c67a;line-height:1.2}
+.preco small{display:block;font-size:12px;font-weight:400;color:var(--mut)}
+.produto .capa a,.produto h3 a{color:inherit;text-decoration:none;display:block}.produto h3 a:hover{text-decoration:underline}.carrinho{border:1px solid currentColor;border-radius:99px;padding:2px 10px;white-space:nowrap}.topo nav{flex-wrap:wrap;row-gap:8px;align-items:center}.topo nav a{white-space:nowrap}
+.botao.pequeno{padding:10px 18px;font-size:14px}
+.produto.largo{grid-column:1/-1;display:grid;grid-template-columns:minmax(280px,1fr) 1.15fr}
+.produto.largo .capa{display:flex;align-items:center}
+.produto.largo .corpo{padding:28px 30px}
+.produto.largo h3{font-size:26px}
+.loja-nota{margin-top:26px;font-size:13.5px;color:var(--mut);max-width:70ch}
+@media (max-width:720px){.produto.largo{display:flex}}
+
+.em-breve{background:var(--bg3)!important;color:var(--mut)!important;cursor:default;opacity:1!important}
+/* principios */
+.principios{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:8px}
+.principio{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:26px}
+.principio h4{
+  font-size:15px;font-weight:600;margin:0 0 8px;color:var(--tx);
+  display:flex;align-items:center;gap:9px;
+}
+.principio h4 span{
+  font-family:"Playfair Display",Georgia,serif;color:var(--p2);font-size:19px;
+}
+.principio p{margin:0;font-size:15px;color:var(--mut)}
+
+/* contacto */
+.contacto{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+.botao{
+  display:inline-block;background:var(--p);color:#fff;text-decoration:none;
+  padding:14px 28px;border-radius:8px;font-weight:500;font-size:15px;
+  transition:opacity .16s;
+}
+.botao:hover{opacity:.9}
+.botao:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.botao.claro{background:transparent;border:1px solid var(--border);color:var(--tx)}
+
+footer{padding:44px 0 60px;color:var(--mut);font-size:14px}
+footer .linhas{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:18px}
+footer a{color:var(--mut)}
+footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
+footer .linhas + .linhas{margin-top:-8px}
+
+/* seletor de lingua PT · DE · FR · EN · IT · ES */
+.lingua{display:flex;align-items:center;gap:2px;font-size:12.5px;letter-spacing:.06em;color:var(--mut)}
+.lingua a{color:var(--mut);text-decoration:none;padding:2px 5px;border-radius:3px;transition:color .16s}
+.lingua a:hover{color:var(--tx)}
+.lingua a[aria-current]{color:var(--tx);font-weight:600}
+.lingua a:focus-visible{outline:2px solid var(--p2);outline-offset:2px}
+
+@media (max-width:640px){
+  .topo nav{gap:16px}
+  .topo nav a{font-size:13px}
+  .topo .env{flex-wrap:wrap;row-gap:8px}
+  .lingua{order:2}
+  .topo nav{order:3;width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="env">
+    <a class="marca" href="#topo">Algo<b>369</b></a>
+    <nav>
+      <a href="#loja">Loja</a>
+      <a href="#guias">Guias</a>
+      <a href="#principios">Como trabalhamos</a>
+      <a href="#contacto">Contato</a>
+      <a class="carrinho" href="https://gumroad.com/checkout" rel="noopener"><span aria-hidden="true">🛒</span> Carrinho</a>
+    </nav>
+    <div class="lingua" role="group" aria-label="Idioma / Sprache">
+      <a href="../index.html" lang="pt" hreflang="pt">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="index.html" lang="pt-BR" hreflang="pt-BR" aria-current="page">BR</a>
+      <span aria-hidden="true">·</span>
+      <a href="../de/index.html" lang="de" hreflang="de">DE</a>
+      <span aria-hidden="true">·</span>
+      <a href="../fr/index.html" lang="fr" hreflang="fr">FR</a>
+      <span aria-hidden="true">·</span>
+      <a href="../en/index.html" lang="en" hreflang="en">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="../it/index.html" lang="it" hreflang="it">IT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../es/index.html" lang="es" hreflang="es">ES</a>
+    </div>
+  </div>
+</header>
+
+<div class="env" id="topo">
+  <div class="hero">
+    <div class="selo"><i></i> Publicação independente · Suíça</div>
+    <h1>Guias honestos para <em>o dia a dia</em>.</h1>
+    <p>Escrevemos sobre casa, bem-estar e as pequenas escolhas que fazemos todos os dias.</p>
+    <p>Só recomendamos o que já usamos ou o que conseguimos justificar. Quando não sabemos, dizemos que não sabemos.</p>
+    <div class="acoes"><a class="botao" href="#loja">Ver a loja</a><a class="botao claro" href="#guias">Ler os guias</a></div>
+  </div>
+</div>
+
+<!-- ================= LOJA ================= -->
+<section id="loja">
+<div class="env">
+  <div class="olho">Loja</div>
+  <h2>O que vendemos hoje</h2>
+  <p class="intro">Aqui só está o que existe e pode ser comprado agora. Quando houver mais, vai aparecer — não antes. Os guias em PDF estão escritos em português de Portugal.</p>
+
+  <ul class="confianca">
+    <li>PDF em português, entregue na hora</li>
+    <li>Pagamento seguro pelo Gumroad</li>
+    <li>Se não servir para você, devolvemos o dinheiro</li>
+    <li>Preços em francos suíços</li>
+  </ul>
+
+  <div class="produtos">
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/mentalidade.webp" alt="Capa do Guia Mentalidade 369" width="800" height="450" loading="lazy"><span class="etiqueta">Comece por aqui</span></div>
+      <div class="corpo">
+        <h3>Guia “Mentalidade 369”</h3>
+        <p>O método em três ritmos (o dia, a semana, o ciclo), as quatro armadilhas e uma página para pendurar na parede.</p>
+        <span class="formato">PDF · 6 páginas</span>
+        <div class="rodape"><span class="preco">CHF 9</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/mentalidade369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/pacote.webp" alt="Capa do Pacote 3·6·9" width="800" height="450" loading="lazy"><span class="etiqueta ouro">3 por CHF 15</span></div>
+      <div class="corpo">
+        <h3>Pacote 3·6·9</h3>
+        <p>O Guia, o Arranque 9 Dias e o Rastreador em um só arquivo, com um guia de leitura.</p>
+        <span class="formato">PDF · 24 páginas</span>
+        <div class="rodape"><span class="preco">CHF 15<small>separadamente, CHF 22</small></span><a class="botao pequeno" href="https://algo369.gumroad.com/l/pacote369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/rastreador.webp" alt="Capa do Rastreador de Consistência" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Rastreador de Consistência</h3>
+        <p>Três métricas, 90 dias, um X por dia. Celebra a sequência que não se quebra, não o dia heroico.</p>
+        <span class="formato">PDF · 8 páginas (A4 e A5)</span>
+        <div class="rodape"><span class="preco">CHF 6</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/rastreador369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/arranque.webp" alt="Capa do Arranque 9 Dias" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Arranque 9 Dias</h3>
+        <p>Um desafio para imprimir: uma área, um número, nove dias. No final, uma única pergunta: o número mudou?</p>
+        <span class="formato">PDF · 8 páginas</span>
+        <div class="rodape"><span class="preco">CHF 7</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/arranque9dias" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/kitfoco.webp" alt="Capa do Kit Foco 90" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Kit Foco 90</h3>
+        <p>O bloco de 90 minutos pronto para imprimir: cartões para a porta, checklist, ritual de encerramento do dia e folha de registro.</p>
+        <span class="formato">PDF · 7 páginas</span>
+        <div class="rodape"><span class="preco">CHF 9</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/kitfoco90" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/diario.webp" alt="Capa do Diário 369" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Diário 369</h3>
+        <p>Um planner para escrever à mão, com páginas para o dia, a semana e o ciclo de nove semanas.</p>
+        <span class="formato">PDF · 7 páginas</span>
+        <div class="rodape"><span class="preco">CHF 12</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/diario369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/memorias.webp" alt="Capa do diário Memórias a Quatro Mãos" width="800" height="450" loading="lazy"><span class="etiqueta">Novo</span></div>
+      <div class="corpo">
+        <h3>Memórias a Quatro Mãos</h3>
+        <p>Um diário para avós e netos preencherem juntos: 87 perguntas em 12 capítulos e quadros “Na tua época…” com dados verdadeiros do mundo, de antes e de agora, sempre com a fonte, e espaço para vocês escreverem os dados da sua terra.</p>
+        <span class="formato">PDF · 53 páginas · letra grande</span>
+        <div class="rodape"><span class="preco">CHF 12</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/memorias369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/combinado.webp" alt="Capa do acordo O Combinado Cá de Casa" width="800" height="450" loading="lazy"><span class="etiqueta">Novo</span></div>
+      <div class="corpo">
+        <h3>O Combinado Cá de Casa</h3>
+        <p>Um acordo sobre jogos e telas para pais e filhos fazerem juntos: quando, onde e o que se joga, 2 semanas para testar e uma revisão no final. Com os sistemas de classificação etária do mundo lado a lado (PEGI, USK, ESRB, ClassInd, CERO e outros), sempre com a fonte.</p>
+        <span class="formato">PDF · 12 páginas A4 · filhos de 8 a 16 anos</span>
+        <div class="rodape"><span class="preco">CHF 5</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/combinado369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/corpo.webp" alt="Capa do Corpo 369" width="800" height="450" loading="lazy"><span class="etiqueta">Novo</span></div>
+      <div class="corpo">
+        <h3>Corpo 369</h3>
+        <p>Para quem não pratica esporte ou parou. 10 minutos por dia, sem academia: um começo de 9 dias e um plano de 9 semanas, com folhas para imprimir.</p>
+        <span class="formato">PDF · 15 páginas</span>
+        <div class="rodape"><span class="preco">CHF 9</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/corpo369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/colorir.webp" alt="Capa do Livro de Colorir 3·6·9" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Livro de Colorir 3·6·9</h3>
+        <p>22 desenhos originais para imprimir: 14 mandalas com simetria de 3, 6 ou 9 e 8 símbolos simples. Pinte devagar.</p>
+        <span class="formato">PDF · 24 páginas</span>
+        <div class="rodape"><span class="preco">CHF 5</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/colorir369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="capa"><img src="../img/capas/cartazes.webp" alt="Capa dos Cartazes 369" width="800" height="450" loading="lazy"></div>
+      <div class="corpo">
+        <h3>Cartazes 369</h3>
+        <p>8 cartazes, cada um com um símbolo e uma frase curta, em alta resolução para imprimir e emoldurar (20 × 25 cm ou A4).</p>
+        <span class="formato">PDF · 8 páginas</span>
+        <div class="rodape"><span class="preco">CHF 7</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/cartazes369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto largo">
+      <div class="capa"><img src="../img/capas/academia.webp" alt="Capa da Academia 369" width="800" height="450" loading="lazy"><span class="etiqueta">O método completo</span></div>
+      <div class="corpo">
+        <h3>Academia 369</h3>
+        <p>Sete aulas escritas, cada uma com uma tarefa que deixa algo pronto. Não são vídeos.</p>
+        <span class="formato">PDF · 14 páginas</span>
+        <div class="rodape"><span class="preco">CHF 19</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/academia369" rel="noopener">Comprar</a></div>
+      </div>
+    </article>
+    <article class="produto largo">
+      <div class="capa"><img src="../img/capas/segunda-opiniao.webp" alt="Capa da Segunda Opinião" width="800" height="450" loading="lazy"><span class="etiqueta">Serviço</span></div>
+      <div class="corpo">
+        <h3>Segunda opinião sobre um robô de trading</h3>
+        <p>Você tem um EA (MetaTrader) e quer saber se ele é real ou se só parece bom no backtest? Testamos o EA de verdade e contamos para você o que encontramos, sem prometer lucros nem vender sinais.</p>
+        <span class="formato">Relatório escrito</span>
+        <div class="rodape"><span class="preco">a partir de CHF 80</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/sbmgyd" rel="noopener">Pedir</a></div>
+      </div>
+    </article>
+  </div>
+  <p class="loja-nota">O pagamento é feito na página segura do Gumroad, que abre em uma nova janela. Produtos digitais: você recebe o arquivo logo depois da compra.</p>
+</div>
+</section>
+
+<!-- ================= GUIAS ================= -->
+<section id="guias">
+<div class="env">
+  <div class="olho">Guias</div>
+  <h2>O que já escrevemos</h2>
+  <p class="intro">Textos longos, sem pressa, sobre coisas que vale a pena entender bem de uma vez.</p>
+
+  <div class="artigos">
+
+    <article class="peca">
+      <h3>A monstera não tem buracos por acaso</h3>
+      <div class="meta">Plantas · 5 min de leitura</div>
+      <p>Quase todo mundo que compra uma monstera faz a mesma pergunta depois de alguns meses: <em>por que as folhas novas vêm inteiras?</em> A resposta diz muito sobre a planta — e sobre o lugar onde você a colocou.</p>
+      <p>Esses recortes se chamam <strong>fenestrações</strong> e não são defeito nem doença. Há duas explicações aceitas, e as duas vêm do lugar de origem da planta: o chão úmido e sombrio das florestas tropicais do sul do México, da Guatemala e do Panamá. Lá, a monstera não é planta de vaso — é uma trepadeira que se agarra aos troncos e sobe em busca de luz, podendo passar dos vinte metros.</p>
+      <p>A primeira explicação é a luz. Em uma folha enorme e inteira, tudo o que está embaixo fica no escuro. Os buracos deixam a luz passar para as folhas de baixo da própria planta. A segunda é o vento e a chuva: uma folha cheia de aberturas deixa um temporal tropical passar sem se rasgar.</p>
+      <div class="destaque">Uma planta jovem tem folhas inteiras. Os buracos só aparecem quando ela amadurece — e ela amadurece mais rápido com luz indireta e espaço para subir.</div>
+      <p>Daí vem a parte prática. Se a sua monstera está fazendo folhas pequenas e fechadas, quase sempre é uma de duas coisas: <strong>pouca luz</strong> ou <strong>nada em que subir</strong>. Um tutor de musgo muda mais o aspecto da planta do que qualquer adubo.</p>
+      <p>E as raízes aéreas que saem do caule não são problema nem sujeira — é assim que ela se agarra às árvores. Você pode guiá-las para a terra do vaso.</p>
+      <p>Sobre o nome: <em>Monstera</em> vem do latim <em>monstrum</em>, pelo tamanho quase monstruoso das folhas. <em>Deliciosa</em> se refere ao fruto, que é comestível e tem gosto de uma mistura de abacaxi com banana — mas só quando está completamente maduro. Verde, ele irrita a boca por causa dos cristais de oxalato de cálcio. Na prática, dentro de casa, ela quase nunca dá fruto.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Como ler uma carta de tarô sem decorar nada</h3>
+      <div class="meta">Tarô · 6 min de leitura</div>
+      <p>Quem começa a aprender tarô costuma fazer a mesma coisa: comprar o baralho e tentar decorar 78 significados. É o caminho mais lento que existe — e o mais desanimador.</p>
+      <p>Existe um atalho, e ele está desenhado dentro das próprias cartas. Quando <strong>Pamela Colman Smith</strong> ilustrou o baralho Rider-Waite em 1909, colocou em cada carta uma cena completa: personagens, objetos, clima, direção do olhar. A cena conta a história. O significado é a leitura da cena, não uma lista à parte.</p>
+      <p>O método é olhar sempre na mesma ordem, antes de abrir qualquer livro:</p>
+      <p><strong>Quem está na carta</strong> — uma pessoa, duas, nenhuma? De pé, sentada, deitada?<br>
+         <strong>Para onde olha</strong> — para a frente, para trás, para baixo? Quem olha para trás está preso ao passado.<br>
+         <strong>O que tem nas mãos</strong> — e o que está no chão, esquecido.<br>
+         <strong>Como está o céu</strong> — limpo, nublado, noite, tempestade. O clima é o estado de espírito.<br>
+         <strong>Para onde a cena leva o seu olhar</strong> — sempre há um caminho, uma porta, um horizonte.</p>
+      <div class="destaque">Metade das vezes, quando você chega ao significado escrito, já tinha chegado lá sozinho.</div>
+      <p>Um exemplo que costuma convencer. <strong>O Diabo</strong> mostra duas figuras acorrentadas a um pedestal. Parece uma carta pesada — até você reparar em um detalhe: as correntes no pescoço estão <em>frouxas</em>. Dava para tirá-las pela cabeça. As figuras poderiam sair e não saem.</p>
+      <p>Não é preciso decorar nada para entender o que isso quer dizer sobre um hábito, um medo ou um relacionamento. A carta não julga: mostra a corrente e deixa a pergunta.</p>
+      <p>Um último conselho para quem está começando: <strong>leia todas as cartas na posição normal nos primeiros meses.</strong> As cartas invertidas dobram o que você precisa saber e confundem mais do que ajudam. Quando os 22 Arcanos Maiores já forem familiares para você, acrescente as invertidas.</p>
+    </article>
+
+    <article class="peca">
+      <h3>O aloe vera morre mais de carinho do que de abandono</h3>
+      <div class="meta">Plantas · 4 min de leitura</div>
+      <p>É uma das plantas mais vendidas do mundo e uma das que mais morrem dentro de casa — quase sempre pelo mesmo motivo, e é o contrário do que se pensa.</p>
+      <p>O aloe vera — no Brasil, a babosa — é originário da Península Arábica, de terrenos secos e pedregosos. É cultivado há tanto tempo que quase não é mais encontrado em estado realmente selvagem: viajou com as pessoas durante milhares de anos. Aparece em tabuletas sumérias de argila de cerca de 2100 a.C. e no papiro egípcio de Ebers, de cerca de 1550 a.C., que descreve preparações medicinais.</p>
+      <p>As folhas carnudas são um reservatório. Por dentro, têm um gel feito quase só de água — é assim que a planta sobrevive a meses sem chuva. Esse mesmo gel é o que se usa há séculos para acalmar queimaduras de sol e pequenas irritações da pele.</p>
+      <div class="destaque">Ela vem do deserto. Quer sol, terra que drene bem e pouquíssima água. No inverno, pode passar um mês sem ser regada.</div>
+      <p>O erro comum é tratá-la como as outras plantas da casa: regar uma vez por semana, terra boa e rica, vaso sem furo. Em três meses as folhas ficam moles e translúcidas — não é sede, é o oposto. As raízes apodreceram.</p>
+      <p>Uma dica prática que pouca gente conhece: logo abaixo da casca verde há uma camada amarela chamada <strong>látex</strong> ou aloína, de sabor muito amargo. É o gel transparente do centro que se usa na pele, não essa camada.</p>
+      <p>E sobre a lenda de que Cleópatra usava aloe — é isso mesmo, lenda. Não é fato documentado. Mas mostra há quanto tempo essa planta tem fama.</p>
+    </article>
+
+    <article class="peca">
+      <h3>Os watts não dizem nada sobre a força de um aspirador</h3>
+      <div class="meta">Casa · 5 min de leitura</div>
+      <p>É o número que aparece na caixa em letras grandes e é o que quase todo mundo compara. Também é o número que menos importa.</p>
+      <p><strong>Watts é consumo, não sucção.</strong> Mede a eletricidade que o aparelho gasta, não o trabalho que ele faz com ela. Um motor de 1200 W mal projetado pode aspirar pior do que um de 500 W bem projetado — a diferença vira calor e barulho.</p>
+      <p>Isso deixou de ser teoria em 2017. O regulamento europeu 666/2013 passou a limitar os aspiradores domésticos a <strong>900 W</strong>. Muita gente achou que os aspiradores iam ficar fracos; não ficaram. Os fabricantes foram obrigados a melhorar o projeto em vez de aumentar o motor.</p>
+      <div class="destaque">Se o único número que o fabricante informa são os watts, isso já diz alguma coisa sobre o aparelho.</div>
+      <p>Os números que vale a pena procurar são outros:</p>
+      <p><strong>Air watts (AW)</strong> — mede a potência de sucção na saída, já descontada a perda do tubo e do bocal. É o mais próximo do que você sente ao aspirar. Nos bons modelos sem fio, fica entre 100 e 250 AW.<br>
+         <strong>Pascal (Pa) ou kPa</strong> — mede o vácuo (pressão negativa) que o motor consegue criar. Útil para comparar, mas sozinho não basta: muito vácuo com pouca vazão de ar levanta a poeira fina e deixa o resto.<br>
+         <strong>Vazão de ar (litros por segundo)</strong> — é o que arrasta a sujeira maior.</p>
+      <p>A sucção só funciona se o ar tiver por onde passar. Um saco meio cheio, um filtro sujo ou um tubo entupido derrubam o desempenho de qualquer aparelho, por mais caro que seja. <strong>Limpar o filtro faz mais diferença do que trocar de aspirador</strong> — e é a manutenção que quase ninguém faz.</p>
+      <p>Uma observação sobre a comparação entre com fio e sem fio: os modelos sem fio modernos ganham em praticidade e perdem em autonomia no modo forte. Se a casa é grande, o número que importa não é a sucção máxima — é <em>quantos minutos</em> ele aguenta nesse modo. Costuma ser bem menos do que o anunciado, porque o anunciado vale para o modo mais fraco.</p>
+    </article>
+
+    <article class="peca">
+      <h3>O que um filtro HEPA faz de verdade — e o que não faz</h3>
+      <div class="meta">Casa · 5 min de leitura</div>
+      <p>&ldquo;HEPA&rdquo; virou selo de qualidade e aparece em coisas que não têm nada a ver umas com as outras. Vale a pena saber o que a palavra significa, porque o significado é preciso.</p>
+      <p>Um filtro HEPA de verdade retém <strong>99,97% das partículas de 0,3 micrômetro</strong>. Esse número não foi escolhido ao acaso e tem uma explicação que surpreende quase todo mundo.</p>
+      <div class="destaque">0,3 µm é o tamanho <em>mais difícil</em> de capturar. Partículas maiores e menores são filtradas com eficiência ainda maior.</div>
+      <p>Parece contraditório, mas não é. As partículas grandes batem nas fibras e ficam presas. As muito pequenas se movem de forma errática (movimento browniano) e acabam colidindo também. As de 0,3 µm são as que melhor escapam dos dois efeitos — por isso é nesse tamanho que se mede o pior caso. Um filtro que captura 99,97% no pior caso captura mais do que isso em todo o resto.</p>
+      <p>Duas armadilhas na hora de comprar:</p>
+      <p><strong>&ldquo;Tipo HEPA&rdquo; ou &ldquo;estilo HEPA&rdquo; não é HEPA.</strong> São expressões sem definição legal e podem aparecer em um filtro que retém 85%. A palavra que importa vem acompanhada de uma norma — na Europa, a EN 1822, com classes de H13 para cima.</p>
+      <p><strong>O filtro não é o aparelho.</strong> Um bom filtro em um purificador que mal movimenta o ar limpa pouco. O número que conta é o <strong>CADR</strong> (Clean Air Delivery Rate), em metros cúbicos por hora: ele diz quanto ar limpo o aparelho entrega de fato. Uma sala de 20 m² com pé-direito normal precisa de bem mais CADR do que a caixa costuma sugerir.</p>
+      <p>E o que um HEPA <em>não</em> faz: não remove gases nem cheiros. As partículas da fumaça ficam no filtro, mas o cheiro da fumaça, os compostos orgânicos voláteis e o cheiro de tinta fresca são gases, não partículas. Para isso é preciso carvão ativado, que é outro filtro e se desgasta mais rápido.</p>
+      <p>Se você tem alergia, a diferença é sentida principalmente no quarto e à noite. Um aparelho bom no lugar certo vale mais do que um aparelho enorme na sala.</p>
+    </article>
+
+    <article class="peca">
+      <h3>A lavanda não quer que você goste dela</h3>
+      <div class="meta">Plantas · 4 min de leitura</div>
+      <p>Há plantas que morrem por falta de atenção. A lavanda morre do contrário — e é por isso que tanta gente desiste depois do primeiro vaso.</p>
+      <p>Ela cresce naturalmente nas encostas secas e calcárias do Mediterrâneo ocidental: a Provença, a Catalunha, os montes da Itália. Terra pobre, muita pedra, sol batendo o dia todo. Os campos roxos das fotos são cultivados, mas a planta é mesmo de lá.</p>
+      <p>Isso define todo o resto. <strong>Terra rica e úmida mata a lavanda.</strong> O que costuma acontecer é o seguinte: a pessoa compra a lavanda, planta em terra boa e escura comprada em saco, rega duas vezes por semana como as outras — e depois de dois meses ela fica cinza no meio e nunca mais se recupera. Não foi sede, foi raiz apodrecida.</p>
+      <div class="destaque">O lugar mais ensolarado que você tiver, terra que drene rápido e rega rara. Se estiver em dúvida, não regue.</div>
+      <p>Sobre o perfume: ele vem de óleos essenciais guardados em pelos minúsculos na superfície das folhas e das flores. Para a planta, não são perfume nenhum — são defesa contra insetos e contra o calor. Ao esfregar as folhas entre os dedos, esses pelos se rompem, e é por isso que o cheiro fica nas mãos.</p>
+      <p>O nome também diz o uso: <em>lavanda</em> vem do latim <em>lavare</em>, lavar. Os romanos a colocavam na água do banho e na lavagem de roupa. O gesto ficou no nome até hoje.</p>
+      <p>Uma coisa prática que muda o aspecto da planta depois de alguns anos: <strong>podar depois da floração</strong>, sem chegar aos galhos velhos e lenhosos. Sem essa poda, a lavanda fica lenhosa embaixo e desengonçada, e aí não tem mais volta.</p>
+      <p>E se você tiver varanda: uma única planta muda a quantidade de abelhas que aparecem. O mel de lavanda tem sabor próprio por causa disso.</p>
+    </article>
+
+    <article class="peca">
+      <h3>A regra do dedo: quando regar, sem calendário</h3>
+      <div class="meta">Plantas · 3 min de leitura</div>
+      <p>A maior parte das plantas de dentro de casa que morrem não morre de sede. Morre de excesso de rega — e quase sempre porque alguém decidiu regar &ldquo;toda quarta-feira&rdquo;.</p>
+      <p>O problema do calendário é que a planta não vive em um calendário. A mesma planta bebe muito mais no verão, com a janela aberta, do que no inverno, com aquecimento e dias curtos. Regar sempre igual é acertar metade do ano e errar a outra metade.</p>
+      <div class="destaque">Enfie o dedo na terra até a segunda dobra. Se sair úmido, não regue. Se sair seco, regue bem até a água escorrer pelo fundo.</div>
+      <p>É simples e funciona para a maioria das plantas de casa. Duas variações que vale a pena conhecer:</p>
+      <p><strong>Suculentas, babosa e cactos</strong> — espere a terra secar <em>toda</em>, não só na superfície. No inverno, podem passar semanas sem água.<br>
+         <strong>Samambaias e plantas de folha fina</strong> — querem a terra sempre levemente úmida, mas nunca encharcada.</p>
+      <p>Como reconhecer o excesso: folhas amarelas e moles, terra com cheiro de mofo, mosquinhas voando em volta do vaso. Como reconhecer a falta: folhas murchas, mas ainda firmes, terra que se solta das paredes do vaso.</p>
+      <p>A confusão entre os dois é comum porque <strong>as folhas caem nos dois casos</strong>. A diferença está no toque: murcha e mole é água demais; murcha e seca é água de menos.</p>
+      <p>E o mais importante de tudo, que não tem nada a ver com rega: <strong>o vaso precisa ter furo.</strong> Um vaso decorativo sem drenagem transforma qualquer rega correta em água parada nas raízes. Se você gosta do vaso, use-o como cachepô — a planta fica lá dentro, no vaso de plástico com furos.</p>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- ================= PRINCÍPIOS ================= -->
+<section id="principios">
+<div class="env">
+  <div class="olho">Como trabalhamos</div>
+  <h2>As regras que seguimos</h2>
+  <p class="intro">Nós as escrevemos aqui para que possam nos cobrar por elas.</p>
+
+  <div class="principios">
+    <div class="principio">
+      <h4><span>1</span> Não prometemos resultados</h4>
+      <p>Não dizemos que uma coisa vai mudar a sua vida. Descrevemos o que ela é, para que serve e onde falha.</p>
+    </div>
+    <div class="principio">
+      <h4><span>2</span> Quando não sabemos, dizemos</h4>
+      <p>Se não testamos, escrevemos que não testamos. Se é lenda e não fato, deixamos claro que é lenda.</p>
+    </div>
+    <div class="principio">
+      <h4><span>3</span> Links declarados</h4>
+      <p>Se um dia ganharmos comissão por um link, isso fica escrito na própria página, em português simples.</p>
+    </div>
+    <div class="principio">
+      <h4><span>4</span> Sem cupons nem pressa</h4>
+      <p>Não publicamos códigos de desconto, contagens regressivas nem ofertas que expiram. Isso vende; não informa.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto" style="border-bottom:none">
+<div class="env">
+  <div class="olho">Contato</div>
+  <h2>Fale com a gente</h2>
+  <p class="intro">Sugestões de temas, correções ou propostas — respondemos a tudo o que for escrito por uma pessoa.</p>
+  <div class="contacto">
+    <a class="botao" href="mailto:hello@algo369.com">hello@algo369.com</a>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="env">
+  <div class="linhas">
+    <a href="#loja">Loja</a>
+    <a href="#guias">Guias</a>
+    <a href="#principios">Como trabalhamos</a>
+    <a href="mailto:hello@algo369.com">Contato</a>
+  </div>
+  <div class="linhas">
+    <a href="../impressum.html">Impressum</a>
+    <a href="../privacidade.html">Privacidade</a>
+    <a href="../afiliados.html">Links de afiliado</a>
+  </div>
+  <p class="fino">
+    Algo369 — publicação independente sediada na Suíça. Escrevemos em português e alemão; os outros idiomas são traduções.
+    O conteúdo destas páginas é informativo e não substitui aconselhamento profissional,
+    médico ou financeiro. Não vendemos sinais de investimento nem prometemos retornos.
+  </p>
+  <p class="fino">&copy; 2026 Algo369</p>
+</div>
+</footer>
+
+<script>
+document.querySelectorAll(".lingua a[hreflang]").forEach(function(a){a.addEventListener("click",function(){
+  try{localStorage.setItem("algo369_lingua",a.getAttribute("hreflang"))}catch(e){}});});
+</script>
+<script>
+// 22/11: clicar na capa ou no título abre a página do produto (Gumroad, por cima do site) com «adicionar ao carrinho».
+document.querySelectorAll("article.produto").forEach(function(p){
+  var b=p.querySelector('a[href*="gumroad.com/l/"]'); if(!b) return;
+  var img=p.querySelector(".capa img"), h=p.querySelector("h3");
+  if(img && img.parentNode.tagName!=="A"){var a=document.createElement("a");a.href=b.href;a.rel="noopener";img.parentNode.insertBefore(a,img);a.appendChild(img);}
+  if(h && !h.querySelector("a")){var t=document.createElement("a");t.href=b.href;t.rel="noopener";while(h.firstChild)t.appendChild(h.firstChild);h.appendChild(t);}
+});
+</script>
+<script src="https://gumroad.com/js/gumroad.js"></script>
+</body>
+</html>
