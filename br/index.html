@@ -568,7 +568,7 @@ document.querySelectorAll(".lingua a[hreflang]").forEach(function(a){a.addEventL
     var b=p.querySelector('a[href*="gumroad.com/l/"]'); if(!b) return;
     var slug=(b.href.split("/l/")[1]||"").split(/[?#]/)[0]; if(!DEMOS[slug]) return;
     var bt=document.createElement("button"); bt.type="button"; bt.className="demo-btn"; bt.textContent="▶ Como funciona (vídeo)";
-    bt.addEventListener("click",function(){v.src=base+"demo_"+slug+".mp4"; v.poster=base+"demo_"+slug+".jpg"; dlg.showModal(); try{v.play()}catch(e){}});
+    bt.addEventListener("click",function(){v.src=base+"demo_br_"+slug+".mp4"; v.poster=base+"demo_br_"+slug+".jpg"; dlg.showModal(); try{v.play()}catch(e){}});
     var f=p.querySelector(".formato"); (f&&f.parentNode?f.parentNode.insertBefore(bt,f.nextSibling):p.querySelector(".corpo").appendChild(bt));
   });
 })();
