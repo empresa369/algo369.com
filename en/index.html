@@ -126,6 +126,7 @@ section{scroll-margin-top:72px}
 .produto .rodape{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
 .preco{font-weight:600;font-size:20px;color:#e8c67a;line-height:1.2}
 .preco small{display:block;font-size:12px;font-weight:400;color:var(--mut)}
+.produto .capa a,.produto h3 a{color:inherit;text-decoration:none;display:block}.produto h3 a:hover{text-decoration:underline}.carrinho{border:1px solid currentColor;border-radius:99px;padding:2px 10px;white-space:nowrap}
 .botao.pequeno{padding:10px 18px;font-size:14px}
 .produto.largo{grid-column:1/-1;display:grid;grid-template-columns:minmax(280px,1fr) 1.15fr}
 .produto.largo .capa{display:flex;align-items:center}
@@ -191,6 +192,7 @@ footer .linhas + .linhas{margin-top:-8px}
       <a href="#guides">Guides</a>
       <a href="#principles">How we work</a>
       <a href="#contact">Contact</a>
+      <a class="carrinho" href="https://gumroad.com/checkout" rel="noopener">🛒 Cart</a>
     </nav>
     <div class="lingua" role="group" aria-label="Language">
       <a href="../index.html" lang="pt" hreflang="pt">PT</a>
@@ -412,5 +414,15 @@ footer .linhas + .linhas{margin-top:-8px}
 </div>
 </footer>
 
+<script>
+// 22/11: clicar na capa ou no título abre a página do produto (Gumroad, por cima do site) com «adicionar ao carrinho».
+document.querySelectorAll("article.produto").forEach(function(p){
+  var b=p.querySelector('a[href*="gumroad.com/l/"]'); if(!b) return;
+  var img=p.querySelector(".capa img"), h=p.querySelector("h3");
+  if(img && img.parentNode.tagName!=="A"){var a=document.createElement("a");a.href=b.href;a.rel="noopener";img.parentNode.insertBefore(a,img);a.appendChild(img);}
+  if(h && !h.querySelector("a")){var t=document.createElement("a");t.href=b.href;t.rel="noopener";while(h.firstChild)t.appendChild(h.firstChild);h.appendChild(t);}
+});
+</script>
+<script src="https://gumroad.com/js/gumroad.js"></script>
 </body>
 </html>
