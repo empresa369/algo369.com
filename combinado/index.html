@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Combinado Cá de Casa — Algo369</title>
+<meta name="description" content="Um acordo para imprimir e preencher em família: quando, onde e o que se joga, 2 semanas para experimentar e uma revisão no fim.">
+<link rel="canonical" href="https://algo369.com/combinado/">
+<meta property="og:title" content="O Combinado Cá de Casa">
+<meta property="og:description" content="Um acordo de jogos e ecrãs para pais e filhos fazerem juntos. Menos proibições, mais combinados.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://algo369.com/combinado/">
+<meta property="og:image" content="https://algo369.com/img/og_combinado.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="O Combinado Cá de Casa: um acordo de jogos e ecrãs para pais e filhos fazerem juntos">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Combinado Cá de Casa">
+<meta name="twitter:description" content="Um acordo de jogos e ecrãs para pais e filhos fazerem juntos. Menos proibições, mais combinados.">
+<meta name="twitter:image" content="https://algo369.com/img/og_combinado.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#06101e; --bg2:#101a30; --bg3:#16203a; --border:#25304f;
+  --tx:#e8eefc; --mut:#93a0bd; --p:#7c4dff; --p2:#2dd4ff; --g:#34d399;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--tx);
+  font-family:"Inter",system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--p2)}
+img{max-width:100%}
+.env{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+/* topo (igual à página inicial) */
+header.topo{
+  position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+}
+.topo .env{display:flex;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
+.marca{
+  font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:600;
+  letter-spacing:-.01em;text-decoration:none;color:var(--tx);margin-right:auto;
+}
+.marca b{color:var(--p2);font-weight:600}
+.topo nav{display:flex;gap:22px}
+.topo nav a{font-size:14px;color:var(--mut);text-decoration:none;transition:color .16s}
+.topo nav a:hover{color:var(--tx)}
+.topo nav a:focus-visible,.marca:focus-visible{outline:2px solid var(--p2);outline-offset:4px;border-radius:3px}
+.carrinho{border:1px solid currentColor;border-radius:99px;padding:2px 10px;white-space:nowrap}.topo nav{flex-wrap:wrap;row-gap:8px;align-items:center}.topo nav a{white-space:nowrap}
+.lingua{display:flex;align-items:center;gap:2px;font-size:12.5px;letter-spacing:.06em;color:var(--mut)}
+.lingua a{color:var(--mut);text-decoration:none;padding:2px 5px;border-radius:3px;transition:color .16s}
+.lingua a:hover{color:var(--tx)}
+.lingua a[aria-current]{color:var(--tx);font-weight:600}
+.lingua a:focus-visible{outline:2px solid var(--p2);outline-offset:2px}
+
+/* topo do produto */
+.hero{padding:clamp(28px,6vw,72px) 0 clamp(40px,7vw,72px);border-bottom:1px solid var(--border);
+  display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,48px);align-items:center}
+.selo{display:inline-flex;align-items:center;gap:9px;margin-bottom:14px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.selo i{width:6px;height:6px;border-radius:50%;background:var(--g);display:block}
+.hero h1{font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(36px,5.6vw,60px);line-height:1.08;margin:0 0 12px;letter-spacing:-.02em;text-wrap:balance}
+.hero .sub{font-size:clamp(18px,2.2vw,21px);color:var(--tx);margin:0 0 14px;max-width:40ch}
+.destaque{border-left:2px solid var(--p);padding-left:16px;margin:0 0 12px;
+  font-family:"Playfair Display",Georgia,serif;font-size:20px;font-style:italic;line-height:1.5;color:var(--tx)}
+.hero .problema{color:var(--mut);margin:0 0 20px;max-width:52ch}
+.compra{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.preco{font-weight:600;font-size:26px;color:#e8c67a;line-height:1.2}
+.formato{display:block;font-size:13px;letter-spacing:.04em;color:var(--mut);opacity:.9;margin-top:12px}
+.hero .capa{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#1c1d21}
+.hero .capa img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+
+/* secções */
+section{padding:clamp(44px,7vw,80px) 0;border-bottom:1px solid var(--border);scroll-margin-top:72px}
+h2{font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(26px,3.6vw,36px);margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance}
+.olho{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:12px;font-weight:500}
+.intro{color:var(--mut);max-width:62ch;margin:0 0 28px}
+
+/* vídeo */
+.video{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:clamp(24px,5vw,56px);align-items:center}
+.video-capa{position:relative;display:block;width:100%;max-width:300px;margin:0 auto;padding:0;border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;background:#000;cursor:pointer}
+.video-capa img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
+.video-capa span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;
+  background:rgba(6,16,30,.78);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;padding-left:5px}
+.video-capa:hover span,.video-capa:focus-visible span{background:var(--p)}
+.video-capa:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.passos{margin:0;padding:0;list-style:none;counter-reset:p}
+.passos li{counter-increment:p;position:relative;padding:0 0 16px 44px;color:var(--tx)}
+.passos li::before{content:counter(p);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;
+  border:1px solid var(--border);color:#e8c67a;font-family:"Playfair Display",Georgia,serif;font-size:16px;display:flex;align-items:center;justify-content:center}
+.nota-ia{font-size:13px;color:var(--mut);margin:6px 0 0}
+.demo-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid var(--border);color:var(--tx);border-radius:99px;padding:8px 16px;font:500 14px Inter,system-ui,sans-serif;cursor:pointer}.demo-btn:hover{border-color:var(--p2)}#demo-dlg{border:0;padding:0;background:#000;border-radius:14px;max-width:min(92vw,420px);width:100%}#demo-dlg::backdrop{background:rgba(3,8,18,.82)}#demo-dlg video{display:block;width:100%;max-height:86vh;background:#000}#demo-dlg button{position:absolute;top:8px;right:8px;z-index:2;background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:99px;width:34px;height:34px;font-size:18px;cursor:pointer}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.galeria figure{margin:0;background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.galeria img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.galeria figcaption{padding:16px 20px 20px;font-size:15px;color:var(--mut);line-height:1.6}
+.galeria figcaption b{display:block;color:var(--tx);font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:19px;margin-bottom:4px}
+
+/* listas */
+.lista{margin:0;padding:0;list-style:none;display:grid;gap:14px;max-width:70ch}
+.lista li{position:relative;padding-left:22px}
+.lista li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--g)}
+.lista li b{color:var(--tx);font-weight:600}
+.duas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:8px}
+.caixa{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:clamp(22px,3vw,30px)}
+.caixa h3{font-size:16px;font-weight:600;margin:0 0 8px}
+.caixa p{margin:0;font-size:16px;color:var(--mut)}
+.confianca{display:flex;flex-wrap:wrap;gap:8px 22px;margin:18px 0 0;padding:0;list-style:none;font-size:14px;color:var(--mut)}
+.confianca li{display:flex;align-items:center;gap:9px}
+.confianca li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g)}
+
+/* perguntas */
+.perguntas{display:grid;gap:12px;max-width:760px}
+.perguntas details{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0 20px}
+.perguntas summary{cursor:pointer;padding:16px 0;font-weight:600;list-style-position:outside}
+.perguntas summary:focus-visible{outline:2px solid var(--p2);outline-offset:3px;border-radius:3px}
+.perguntas details p{margin:0 0 16px;color:var(--mut);font-size:16px}
+
+/* botões */
+.botao{display:inline-block;background:var(--p);color:#fff;text-decoration:none;
+  padding:14px 28px;border-radius:8px;font-weight:500;font-size:15px;transition:opacity .16s}
+.botao:hover{opacity:.9}
+.botao:focus-visible{outline:2px solid var(--p2);outline-offset:3px}
+.botao.claro{background:transparent;border:1px solid var(--border);color:var(--tx)}
+.fecho{text-align:center}
+.fecho .compra{justify-content:center}
+.fecho p{color:var(--mut);margin:16px auto 0;max-width:60ch;font-size:15px}
+.loja-nota{font-size:13.5px}
+
+footer{padding:44px 0 60px;color:var(--mut);font-size:14px}
+footer .linhas{display:flex;flex-wrap:wrap;gap:10px 28px;margin-bottom:18px}
+footer a{color:var(--mut)}
+footer .fino{font-size:12.5px;opacity:.8;max-width:70ch;line-height:1.7}
+footer .linhas + .linhas{margin-top:-8px}
+
+@media (max-width:760px){
+  .hero,.video,.galeria,.duas{grid-template-columns:minmax(0,1fr)}
+  .video-capa{max-width:240px}
+}
+@media (max-width:640px){
+  .topo nav{gap:16px}
+  .topo nav a{font-size:13px}
+  .topo .env{flex-wrap:wrap;row-gap:8px}
+  .lingua{order:2}
+  .topo nav{order:3;width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="env">
+    <a class="marca" href="../">Algo<b>369</b></a>
+    <nav>
+      <a href="../#loja">Loja</a>
+      <a href="../#guias">Guias</a>
+      <a href="../#principios">Como trabalhamos</a>
+      <a href="../#contacto">Contacto</a>
+      <a class="carrinho" href="https://gumroad.com/checkout" rel="noopener"><span aria-hidden="true">🛒</span> Carrinho</a>
+    </nav>
+    <div class="lingua" role="group" aria-label="Idioma / Sprache">
+      <a href="./" lang="pt" hreflang="pt" aria-current="page">PT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../br/index.html" lang="pt-BR" hreflang="pt-BR">BR</a>
+      <span aria-hidden="true">·</span>
+      <a href="../de/index.html" lang="de" hreflang="de">DE</a>
+      <span aria-hidden="true">·</span>
+      <a href="../fr/index.html" lang="fr" hreflang="fr">FR</a>
+      <span aria-hidden="true">·</span>
+      <a href="../en/index.html" lang="en" hreflang="en">EN</a>
+      <span aria-hidden="true">·</span>
+      <a href="../it/index.html" lang="it" hreflang="it">IT</a>
+      <span aria-hidden="true">·</span>
+      <a href="../es/index.html" lang="es" hreflang="es">ES</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="env">
+  <div class="hero">
+    <div>
+      <div class="selo"><i></i> Em família</div>
+      <h1>O Combinado Cá de Casa</h1>
+      <p class="sub">Um acordo de jogos e ecrãs para pais e filhos fazerem juntos.</p>
+      <p class="destaque">Menos proibições, mais combinados.</p>
+      <p class="problema">Em vez de regras impostas de um dia para o outro, pais e filhos sentam-se à mesa e combinam juntos as regras dos jogos e dos ecrãs.</p>
+      <div class="compra">
+        <span class="preco">CHF 5</span>
+        <a class="botao" href="https://algo369.gumroad.com/l/combinado369" rel="noopener">Comprar</a>
+        <button type="button" class="demo-btn" data-demo="combinado369">▶ Como funciona (vídeo)</button>
+      </div>
+      <span class="formato">PDF · 12 páginas A4 · filhos dos 8 aos 16 anos</span>
+    </div>
+    <div class="capa"><img src="../img/capas/combinado.webp" alt="Capa do acordo O Combinado Cá de Casa" width="800" height="450"></div>
+  </div>
+</div>
+
+<!-- ================= VÍDEO ================= -->
+<section id="como-funciona">
+<div class="env video">
+  <button type="button" class="video-capa" data-demo="combinado369" aria-label="Ver o vídeo «Como funciona»">
+    <img src="../video/demo_combinado369.jpg" alt="" width="720" height="1280" loading="lazy"><span aria-hidden="true">▶</span>
+  </button>
+  <div>
+    <div class="olho">Como funciona</div>
+    <h2>Combinar, experimentar, rever</h2>
+    <ol class="passos">
+      <li>Primeiro, leem juntos o que dizem as idades, com os sistemas do mundo lado a lado.</li>
+      <li>Depois, preenchem o acordo: quando se joga, onde se joga e o que vem antes.</li>
+      <li>Os pais também prometem, e todos assinam.</li>
+      <li>Durante duas semanas, marcam a grelha todos os dias.</li>
+      <li>No fim, reveem juntos: o que correu bem fica, o que não correu muda.</li>
+    </ol>
+    <p class="nota-ia">Vídeo com voz gerada por IA.</p>
+  </div>
+</div>
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section id="por-dentro">
+<div class="env">
+  <div class="olho">Por dentro</div>
+  <h2>O que vão preencher</h2>
+  <div class="galeria">
+    <figure><img src="../img/combinado/galeria-1.webp" alt="Última página do acordo: «Se não cumprirmos», «O que os pais também prometem» e «Assinamos todos»" width="1280" height="720" loading="lazy">
+      <figcaption><b>O acordo</b>Nove pontos para preencherem juntos: quando e onde se joga, que jogos, o que se faz online, compras e o que os pais também prometem.</figcaption></figure>
+    <figure><img src="../img/combinado/galeria-2.webp" alt="Página «O que dizem as idades», com os sistemas de idades do mundo" width="1280" height="720" loading="lazy">
+      <figcaption><b>O que dizem as idades</b>Os sistemas de idades do mundo lado a lado (PEGI, USK, ESRB, ClassInd, CERO e outros), quando a idade é lei e o que o PEGI, a USK e o ESRB aconselham aos pais. Com fontes.</figcaption></figure>
+    <figure><img src="../img/combinado/galeria-3.webp" alt="Grelha semanal e página de revisão" width="1280" height="720" loading="lazy">
+      <figcaption><b>Duas semanas, depois revisão</b>Uma grelha para marcar todos os dias, missões da vida real e, no fim, uma revisão para mudarem o que não funcionou.</figcaption></figure>
+    <figure><img src="../img/combinado/galeria-4.webp" alt="Páginas «Dicas de conversa» e «Missões da vida real»" width="1280" height="720" loading="lazy">
+      <figcaption><b>Para falar e fazer</b>10 perguntas abertas para ouvir mais do que falar, e 17 missões fora do ecrã para fazerem juntos.</figcaption></figure>
+  </div>
+</div>
+</section>
+
+<!-- ================= O QUE TRAZ ================= -->
+<section id="o-que-traz">
+<div class="env">
+  <div class="olho">O que traz</div>
+  <h2>O que está lá dentro</h2>
+  <ul class="lista">
+    <li><b>Como usar:</b> seis passos para uma conversa calma, e quem decide o quê.</li>
+    <li><b>O que dizem as idades:</b> os sistemas do mundo lado a lado (PEGI, USK, ESRB, ClassInd, CERO, GRAC, ACB, o do México e a IARC das lojas digitais), uma linha para o sistema do teu país, quando a idade é lei e o que o PEGI, a USK e o ESRB aconselham aos pais. Tudo com fonte.</li>
+    <li><b>O acordo (3 páginas):</b> quando e onde se joga, o que vem antes, que jogos e porquê, jogo online e desconhecidos, compras dentro dos jogos, o que acontece se não se cumprir, o que os pais também prometem e as assinaturas de todos.</li>
+    <li><b>Duas grelhas semanais</b> para marcar todos os dias.</li>
+    <li><b>Uma página de revisão</b>, ao fim das 2 semanas.</li>
+    <li><b>Missões da vida real:</b> 17 ideias de atividades fora do ecrã, para escolherem juntos.</li>
+    <li><b>Dicas de conversa:</b> 10 perguntas abertas para falar com os filhos sobre o que jogam.</li>
+  </ul>
+  <p class="intro" style="margin:24px 0 0"><b style="color:var(--tx)">O que recebes:</b> PDF de 12 páginas A4, com letra grande e páginas brancas, para gastar pouca tinta. Imprimes em casa e preenches à mão.</p>
+</div>
+</section>
+
+<!-- ================= PARA QUEM ================= -->
+<section id="para-quem">
+<div class="env">
+  <div class="olho">Para quem</div>
+  <h2>Para quem é, e para quem não é</h2>
+  <div class="duas">
+    <div class="caixa">
+      <h3>Para quem é</h3>
+      <p>Para famílias com filhos dos 8 aos 16 anos. Para os pais que preferem conversar a proibir, e para os filhos que querem ter uma palavra a dizer.</p>
+    </div>
+    <div class="caixa">
+      <h3>Para quem não é</h3>
+      <p>Não é uma app de controlo parental, nem um conselho médico ou jurídico. Não promete resultados: é um ponto de partida para uma conversa, e cada família é diferente.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ================= PERGUNTAS ================= -->
+<section id="perguntas">
+<div class="env">
+  <div class="olho">Perguntas</div>
+  <h2>Perguntas frequentes</h2>
+  <div class="perguntas">
+    <details><summary>Quem decide o quê?</summary>
+      <p>Em três coisas, a última palavra é dos pais: a idade dos jogos, o contacto com desconhecidos e o dinheiro. Em tudo o resto (horas, dias, sítios, missões), procurem um meio-termo. E expliquem sempre porquê.</p></details>
+    <details><summary>E se tivermos mais de um filho?</summary>
+      <p>Com mais de um filho, imprimam uma grelha para cada um.</p></details>
+    <details><summary>Como recebo o PDF?</summary>
+      <p>Recebes o PDF logo a seguir à compra. Sem subscrição. O pagamento é feito na página segura do Gumroad.</p></details>
+    <details><summary>E se não me servir?</summary>
+      <p>Se achares que não te serve, escreve para <a href="mailto:hello@algo369.com">hello@algo369.com</a> e devolvemos o dinheiro.</p></details>
+    <details><summary>Ficam com o que escrevermos?</summary>
+      <p>O PDF fica convosco: não recolhemos nenhum dado do que escreverem.</p></details>
+  </div>
+</div>
+</section>
+
+<!-- ================= FECHO ================= -->
+<section id="comprar" style="border-bottom:none">
+<div class="env fecho">
+  <h2>O Combinado Cá de Casa</h2>
+  <p style="margin-top:0">PDF de 12 páginas A4 · letra grande · para imprimir em casa · filhos dos 8 aos 16 anos</p>
+  <div class="compra" style="margin-top:22px">
+    <span class="preco">CHF 5</span>
+    <a class="botao" href="https://algo369.gumroad.com/l/combinado369" rel="noopener">Comprar</a>
+  </div>
+  <p>Desenhado na Suíça. Se não te servir, devolvemos o dinheiro: <a href="mailto:hello@algo369.com">hello@algo369.com</a></p>
+  <p class="loja-nota">O pagamento é feito na página segura do Gumroad. Produtos digitais: recebes o ficheiro logo depois da compra.</p>
+  <p><a class="botao claro" href="../#loja">Ver a loja</a></p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="env">
+  <div class="linhas">
+    <a href="../#loja">Loja</a>
+    <a href="../#guias">Guias</a>
+    <a href="../#principios">Como trabalhamos</a>
+    <a href="mailto:hello@algo369.com">Contacto</a>
+  </div>
+  <div class="linhas">
+    <a href="../impressum.html">Impressum</a>
+    <a href="../privacidade.html">Privacidade</a>
+    <a href="../afiliados.html">Ligações de afiliado</a>
+  </div>
+  <p class="fino">
+    Algo369 — publicação independente sediada na Suíça. Escrevemos em português e alemão; as outras línguas são traduções.
+    O conteúdo destas páginas é informativo e não substitui aconselhamento profissional,
+    médico ou financeiro. Não vendemos sinais de investimento nem prometemos retornos.
+  </p>
+  <p class="fino">&copy; 2026 Algo369</p>
+</div>
+</footer>
+
+<script>
+document.querySelectorAll(".lingua a[hreflang]").forEach(function(a){a.addEventListener("click",function(){
+  try{localStorage.setItem("algo369_lingua",a.getAttribute("hreflang"))}catch(e){}});});
+</script>
+<dialog id="demo-dlg" aria-label="Vídeo de demonstração"><button type="button" aria-label="Fechar">✕</button><video controls playsinline preload="none"></video></dialog>
+<script>
+// Vídeo de demonstração (o mesmo modal da página inicial): os botões com data-demo abrem-no.
+(function(){
+  var DEMOS={combinado369:1};
+  var base="../video/";
+  var dlg=document.getElementById("demo-dlg"); if(!dlg||!dlg.showModal) return;
+  var v=dlg.querySelector("video");
+  function fechar(){v.pause();dlg.close();}
+  dlg.querySelector("button").addEventListener("click",fechar);
+  dlg.addEventListener("click",function(e){if(e.target===dlg)fechar();});
+  dlg.addEventListener("close",function(){v.pause();});
+  document.querySelectorAll("[data-demo]").forEach(function(bt){
+    var slug=bt.getAttribute("data-demo"); if(!DEMOS[slug]) return;
+    bt.addEventListener("click",function(){v.src=base+"demo_"+slug+".mp4"; v.poster=base+"demo_"+slug+".jpg"; dlg.showModal(); try{v.play()}catch(e){}});
+  });
+})();
+</script>
+<script src="https://gumroad.com/js/gumroad.js"></script>
+</body>
+</html>

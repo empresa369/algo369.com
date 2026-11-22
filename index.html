@@ -9,6 +9,14 @@
 <meta property="og:description" content="Guias honestos para o dia a dia. Só recomendamos o que podemos justificar.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://algo369.com">
+<meta property="og:image" content="https://algo369.com/img/og_algo369.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Algo369 — guias honestos para o dia a dia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Algo369">
+<meta name="twitter:description" content="Guias honestos para o dia a dia. Só recomendamos o que podemos justificar.">
+<meta name="twitter:image" content="https://algo369.com/img/og_algo369.jpg">
 <link rel="alternate" hreflang="pt-PT" href="https://algo369.com/">
 <link rel="alternate" hreflang="pt-BR" href="https://algo369.com/br/">
 <link rel="alternate" hreflang="de" href="https://algo369.com/de/">
@@ -121,6 +129,7 @@ article.peca strong{color:var(--tx);font-weight:600}
 }
 
 section{scroll-margin-top:72px}
+.produto[id]{scroll-margin-top:90px}
 /* chamada no topo */
 .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 
@@ -195,6 +204,7 @@ footer .linhas + .linhas{margin-top:-8px}
   .topo .env{flex-wrap:wrap;row-gap:8px}
   .lingua{order:2}
   .topo nav{order:3;width:100%}
+  .produto[id]{scroll-margin-top:196px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -254,7 +264,7 @@ footer .linhas + .linhas{margin-top:-8px}
   </ul>
 
   <div class="produtos">
-    <article class="produto">
+    <article id="mentalidade" class="produto">
       <div class="capa"><img src="img/capas/mentalidade.webp" alt="Capa do Guia Mentalidade 369" width="800" height="450" loading="lazy"><span class="etiqueta">Começa por aqui</span></div>
       <div class="corpo">
         <h3>Guia «Mentalidade 369»</h3>
@@ -263,7 +273,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 9</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/mentalidade369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="pacote" class="produto">
       <div class="capa"><img src="img/capas/pacote.webp" alt="Capa do Pacote 3·6·9" width="800" height="450" loading="lazy"><span class="etiqueta ouro">3 por CHF 15</span></div>
       <div class="corpo">
         <h3>Pacote 3·6·9</h3>
@@ -272,7 +282,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 15<small>em separado, CHF 22</small></span><a class="botao pequeno" href="https://algo369.gumroad.com/l/pacote369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="rastreador" class="produto">
       <div class="capa"><img src="img/capas/rastreador.webp" alt="Capa do Rastreador de Consistência" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Rastreador de Consistência</h3>
@@ -281,7 +291,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 6</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/rastreador369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="arranque" class="produto">
       <div class="capa"><img src="img/capas/arranque.webp" alt="Capa do Arranque 9 Dias" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Arranque 9 Dias</h3>
@@ -290,7 +300,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 7</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/arranque9dias" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="kitfoco" class="produto">
       <div class="capa"><img src="img/capas/kitfoco.webp" alt="Capa do Kit Foco 90" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Kit Foco 90</h3>
@@ -299,7 +309,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 9</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/kitfoco90" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="diario" class="produto">
       <div class="capa"><img src="img/capas/diario.webp" alt="Capa do Diário 369" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Diário 369</h3>
@@ -308,7 +318,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 12</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/diario369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="memorias" class="produto">
       <div class="capa"><img src="img/capas/memorias.webp" alt="Capa do diário Memórias a Quatro Mãos" width="800" height="450" loading="lazy"><span class="etiqueta">Novo</span></div>
       <div class="corpo">
         <h3>Memórias a Quatro Mãos</h3>
@@ -317,16 +327,16 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 12</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/memorias369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="combinado" class="produto">
       <div class="capa"><img src="img/capas/combinado.webp" alt="Capa do acordo O Combinado Cá de Casa" width="800" height="450" loading="lazy"><span class="etiqueta">Novo</span></div>
       <div class="corpo">
         <h3>O Combinado Cá de Casa</h3>
         <p>Um acordo de jogos e ecrãs para pais e filhos fazerem juntos: quando, onde e o que se joga, 2 semanas para experimentar e uma revisão no fim. Com os sistemas de idades do mundo lado a lado (PEGI, USK, ESRB, ClassInd, CERO e outros), sempre com a fonte.</p>
-        <span class="formato">PDF · 12 páginas A4 · filhos dos 8 aos 16 anos</span>
+        <span class="formato">PDF · 12 páginas A4 · filhos dos 8 aos 16 anos · <a href="combinado/">Ver o acordo</a></span>
         <div class="rodape"><span class="preco">CHF 5</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/combinado369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="corpo" class="produto">
       <div class="capa"><img src="img/capas/corpo.webp" alt="Capa do Corpo 369" width="800" height="450" loading="lazy"><span class="etiqueta">Novo</span></div>
       <div class="corpo">
         <h3>Corpo 369</h3>
@@ -335,7 +345,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 9</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/corpo369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="colorir" class="produto">
       <div class="capa"><img src="img/capas/colorir.webp" alt="Capa do Livro de Colorir 3·6·9" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Livro de Colorir 3·6·9</h3>
@@ -344,7 +354,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 5</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/colorir369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto">
+    <article id="cartazes" class="produto">
       <div class="capa"><img src="img/capas/cartazes.webp" alt="Capa dos Cartazes 369" width="800" height="450" loading="lazy"></div>
       <div class="corpo">
         <h3>Cartazes 369</h3>
@@ -353,7 +363,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 7</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/cartazes369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto largo">
+    <article id="academia" class="produto largo">
       <div class="capa"><img src="img/capas/academia.webp" alt="Capa da Academia 369" width="800" height="450" loading="lazy"><span class="etiqueta">O método completo</span></div>
       <div class="corpo">
         <h3>Academia 369</h3>
@@ -362,7 +372,7 @@ footer .linhas + .linhas{margin-top:-8px}
         <div class="rodape"><span class="preco">CHF 19</span><a class="botao pequeno" href="https://algo369.gumroad.com/l/academia369" rel="noopener">Comprar</a></div>
       </div>
     </article>
-    <article class="produto largo">
+    <article id="segunda-opiniao" class="produto largo">
       <div class="capa"><img src="img/capas/segunda-opiniao.webp" alt="Capa da Segunda Opinião" width="800" height="450" loading="lazy"><span class="etiqueta">Serviço</span></div>
       <div class="corpo">
         <h3>Segunda opinião sobre um robot de trading</h3>
