@@ -387,7 +387,13 @@ function fimPtr(e){ptrs.delete(e.pointerId);if(ptrs.size<2)pinch=null;
   arrasto=null}
 cv.addEventListener("pointerup",fimPtr);cv.addEventListener("pointercancel",fimPtr);
 cv.addEventListener("wheel",e=>{e.preventDefault();const [sx,sy]=evPos(e);const k=Math.exp(-e.deltaY*0.0015);const s=Math.max(0.05,Math.min(6,V.s*k));const wx=(sx-V.ox)/V.s,wy=(sy-V.oy)/V.s;V={s,ox:sx-wx*s,oy:sy-wy*s};desenha()},{passive:false});
-function terminaDesenho(){desenho=null;dica("Paredes prontas. Toque em uma parede para mudar a medida.");tudo()}
+function terminaDesenho(){const pts=desenho&&desenho.pts;desenho=null;
+  // Contorno fechado (voltou ao 1.º canto): passa a contar como chão e paredes externas, como «Começar com uma casa retangular».
+  if(pts&&pts.length>=4&&Math.hypot(pts[pts.length-1][0]-pts[0][0],pts[pts.length-1][1]-pts[0][1])<1){const poly=pts.slice(0,-1).map(q=>[...q]);
+    const ws=poly.map((q,i)=>{const r=poly[(i+1)%poly.length];return S.paredes.find(p=>p.de[0]===q[0]&&p.de[1]===q[1]&&p.ate[0]===r[0]&&p.ate[1]===r[1])});
+    if(ws.every(Boolean)&&areaPol(poly)>=0.25&&!S.divisoes.some(d=>ptIn(centro(poly),d.pontos))){ws.forEach(p=>p.externa=true);S.divisoes.push({nome:S.divisoes.length?"Cômodo "+(S.divisoes.length+1):"Casa",pontos:poly});
+      dica("Contorno fechado: chão de "+fmt(areaPol(poly),1)+" m². Toque em uma parede para mudar a medida.");return tudo()}}
+  dica("Paredes prontas. Toque em uma parede para mudar a medida.");tudo()}
 
 /* ============ Ferramentas e painel ============ */
 const IC={sel:'<path d="M5 3l14 8-6 1.5L10 19z" fill="currentColor"/>',mao:'<path d="M8 11V5a1.5 1.5 0 013 0v5m0-1V4a1.5 1.5 0 013 0v6m0-3a1.5 1.5 0 013 0v7a6 6 0 01-6 6h-1a6 6 0 01-5-3l-2.5-4a1.5 1.5 0 012.5-1.5L8 14" fill="none" stroke="currentColor" stroke-width="1.6"/>',
@@ -432,7 +438,7 @@ function painelTerreno(){const t=TT();if(!IMG&&!fontesSat().length)return `<h3>T
     <div class="campo"><label>Aplainar o lote a (m)</label><input type="number" step="0.1" id="tPlano" value="${((lf.plano!=null?lf.plano:t.nivel)/100).toFixed(2)}"></div>
     <button class="btn" data-t="aplainar">Aplainar o lote</button>${lf.plano!=null?`<button class="btn" data-t="natural">Voltar ao terreno natural</button>`:""}
     ${mt?`<p class="resumo">Movimento de terra (estimativa): corte <b>${fmt(mt.corte,1)} m³</b> · aterro <b>${fmt(mt.aterro,1)} m³</b></p>`:`<p class="resumo">Para moldar à mão, use «3 · Moldar: pontos de altura».</p>`}`}
-  if(ferr==="t_regua"){h+=regua&&regua.B?`<p class="resumo">Distância real entre os 2 pontos laranja:</p><div class="campo"><label>Metros</label><input type="number" step="0.1" id="tDist" value="10"></div><button class="btn ouro" data-t="aplica">Aplicar escala</button>`:`<p class="resumo">Toque no início e no fim da régua do Google Maps (ou de um muro cuja medida você conheça).</p>`}
+  if(ferr==="t_regua"){h+=regua&&regua.B?`<p class="resumo">Distância real entre os 2 pontos laranja:</p><div class="campo"><label>Metros</label><input type="number" step="0.1" id="tDist" value="" placeholder="ex.: 10"></div><button class="btn ouro" data-t="aplica">Aplicar escala</button>`:`<p class="resumo">Toque no início e no fim da régua do Google Maps (ou de um muro cuja medida você conheça).</p>`}
   if(ferr==="cota")h+=`<p class="resumo">Toque no terreno para colocar um ponto de altura. Ex.: a frente do lote a 0 m e o fundo a +3,00 m. A casa fica plana no «nível da casa».</p>`;
   if(sel&&sel.t==="cota"&&t.cotas[sel.i])h+=`<div class="campo"><label>Altura deste ponto (m)</label><input type="number" step="0.1" data-cb="cotah" value="${(t.cotas[sel.i].h/100).toFixed(2)}"></div><button class="btn perigo" data-t="cotadel">Excluir ponto</button>`;
   h+=`<div class="campo"><label>Girar (°)</label><input type="number" step="1" data-cb="trot" value="${esc(String(t.rot))}"></div><div class="campo"><label>Transparência (%)</label><input type="number" step="5" data-cb="top" value="${Math.round(t.op*100)}"></div>
@@ -490,7 +496,7 @@ function acaoTerreno(k){const t=TT();
   if(k==="aplainar"&&loteF()){const v=parseFloat(document.getElementById("tPlano").value);if(isFinite(v)){snap();S.lote.plano=Math.round(v*100);t.nivel=S.lote.plano;toast("Lote aplainado a "+fmt(v)+" m. A casa fica a este nível.")}}
   if(k==="natural"&&loteF()){snap();delete S.lote.plano}
   if(k==="aplica"&&regua&&regua.B){const m=parseFloat(document.getElementById("tDist").value);const dw=Math.hypot(regua.B[0]-regua.A[0],regua.B[1]-regua.A[1]);
-    if(m>0&&dw>0){snap();const pa=mundoImg(regua.A);t.esc=t.esc*(m*100)/dw;const na=imgMundo(pa[0],pa[1]);t.x+=regua.A[0]-na[0];t.y+=regua.A[1]-na[1];regua=null;ferr="t_mover";toast("Escala ajustada.");enquadraTerreno()}}
+    if(m>0&&dw>0){snap();const pa=mundoImg(regua.A);t.esc=t.esc*(m*100)/dw;const na=imgMundo(pa[0],pa[1]);t.x+=regua.A[0]-na[0];t.y+=regua.A[1]-na[1];regua=null;ferr="t_mover";toast("Escala ajustada.");enquadraTerreno()}else if(!(m>0))toast("Escreva a distância real, em metros, entre os 2 pontos.")}
   if(k==="cotadel"&&sel&&sel.t==="cota"){snap();t.cotas.splice(sel.i,1);sel=null}
   if(k==="tdel"){snap();IMG=null;IMGURL=null;try{localStorage.removeItem(LSI)}catch(e){}delete S.terreno;ferr="sel"}
   if(k==="fim"){regua=null;return clicaFerr("parede")}
