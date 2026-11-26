@@ -26,6 +26,8 @@
   var L=["de","fr","en","it","es"],K="algo369_lingua",p=location.pathname,s=null;
   if(p!=="/br/"&&p!=="/br/index.html")return;
   if(/bot|crawl|spider|slurp|facebookexternalhit|preview/i.test(navigator.userAgent))return;
+  var q=null;try{q=new URLSearchParams(location.search).get("l")}catch(e){}
+  if(q==="pt-BR"){try{localStorage.setItem(K,"pt-BR")}catch(e){}return;}
   try{s=localStorage.getItem(K)}catch(e){}
   var r=document.referrer||"";
   if(r&&r.indexOf("//"+location.host+"/")>-1){try{localStorage.setItem(K,"pt-BR")}catch(e){}return;}
